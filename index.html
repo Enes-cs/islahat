@@ -1,0 +1,2135 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <!-- iPhone SE3 & iOS Safari Standalone / PWA Meta Tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="KPSS Tarih">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="theme-color" content="#4f46e5">
+
+    <!-- Apple Touch Icon (180x180 Retina Display PNG) -->
+    <link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAABo/88pAAAB90lEQVR4nO3WsQ3DMAwEQcuY111y06Z41bCGBBggE/HfgKvh/R8AuMvV7wA0VfRkFU9W8WQV73r6vW37u57e84qnrKJnq3iyjZ6t4skyeraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyzTfv+71uR8t7XvGUVfRsFU+20bNVPFnFk1U8WcW73/4B68K3i8831w0AAAAASUVORK5CYII=">
+    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAABo/88pAAAB90lEQVR4nO3WsQ3DMAwEQcuY111y06Z41bCGBBggE/HfgKvh/R8AuMvV7wA0VfRkFU9W8WQV73r6vW37u57e84qnrKJnq3iyjZ6t4skyeraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyzTfv+71uR8t7XvGUVfRsFU+20bNVPFnFk1U8WcW73/4B68K3i8831w0AAAAASUVORK5CYII=">
+
+    <title>KPSS Tarih Oyunları</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --font: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --bg: #f8fafc;
+            --surface: #ffffff;
+            --surface-subtle: #f1f5f9;
+            --glass: rgba(255, 255, 255, 0.94);
+            --border: #e2e8f0;
+            --text: #0f172a;
+            --text-muted: #64748b;
+            --primary: #4f46e5;
+            --primary-light: rgba(79, 70, 229, 0.12);
+            --g1: #d97706;
+            --g2: #2563eb;
+            --mixed: #7c3aed;
+            --success: #10b981;
+            --danger: #ef4444;
+            --warning: #f59e0b;
+            --card-bg: #1e293b;
+            --card-text: #ffffff;
+            --shadow: 0 3px 10px -2px rgba(0, 0, 0, 0.06);
+            --radius-sm: 6px;
+            --radius-md: 10px;
+            --radius-lg: 14px;
+            --sat: env(safe-area-inset-top, 0px);
+            --sab: env(safe-area-inset-bottom, 0px);
+        }
+
+        [data-theme="dark"] {
+            --bg: #0b0f19;
+            --surface: #131b2e;
+            --surface-subtle: #1e293b;
+            --glass: rgba(19, 27, 46, 0.96);
+            --border: #243048;
+            --text: #f8fafc;
+            --text-muted: #94a3b8;
+            --primary: #6366f1;
+            --primary-light: rgba(99, 102, 241, 0.2);
+            --card-bg: #1e293b;
+            --card-text: #ffffff;
+            --shadow: 0 4px 14px -2px rgba(0, 0, 0, 0.5);
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        html, body {
+            font-family: var(--font);
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            min-height: -webkit-fill-available;
+            line-height: 1.4;
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-size-adjust: 100%;
+            -webkit-user-select: none;
+            user-select: none;
+            touch-action: manipulation;
+            overscroll-behavior-y: none;
+        }
+
+        input, textarea, select {
+            -webkit-user-select: text;
+            user-select: text;
+        }
+
+        body {
+            padding-top: var(--sat);
+            padding-bottom: max(16px, var(--sab));
+        }
+
+        .ios-install-banner {
+            background: linear-gradient(135deg, var(--primary), var(--mixed));
+            color: #ffffff;
+            padding: 8px 12px;
+            font-size: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            box-shadow: var(--shadow);
+        }
+        .ios-install-banner.hidden { display: none !important; }
+        .btn-banner-close {
+            background: rgba(255, 255, 255, 0.25);
+            border: none;
+            color: #fff;
+            border-radius: 50%;
+            width: 22px;
+            height: 22px;
+            font-size: 11px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: var(--glass);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            box-shadow: var(--shadow);
+        }
+
+        .nav-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 8px 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .nav-row-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 6px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: 800;
+            font-size: 0.95rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 180px;
+        }
+        .brand span.logo {
+            width: 30px;
+            height: 30px;
+            background: linear-gradient(135deg, var(--primary), var(--mixed));
+            color: #fff;
+            border-radius: 8px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+
+        .nav-actions {
+            display: flex;
+            gap: 4px;
+            align-items: center;
+        }
+
+        .btn-icon {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            width: 32px;
+            height: 32px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 14px;
+            color: var(--text);
+            transition: transform 0.1s;
+        }
+        .btn-icon:active { transform: scale(0.92); }
+
+        .btn-new-game {
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            padding: 6px 10px;
+            border-radius: var(--radius-sm);
+            font-weight: 700;
+            font-size: 0.78rem;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 3px;
+        }
+        .btn-new-game:active { opacity: 0.85; }
+
+        .game-select-wrap { width: 100%; }
+        select.game-select {
+            width: 100%;
+            padding: 6px 10px;
+            background: var(--surface);
+            color: var(--text);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            font-weight: 700;
+            font-size: 0.82rem;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .mode-tabs {
+            display: flex;
+            background: var(--surface-subtle);
+            padding: 3px;
+            border-radius: var(--radius-md);
+            gap: 3px;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+        .mode-tabs::-webkit-scrollbar { display: none; }
+
+        .tab-btn {
+            flex: 1;
+            min-width: 78px;
+            padding: 6px 8px;
+            border: none;
+            background: transparent;
+            color: var(--text-muted);
+            font-size: 0.78rem;
+            font-weight: 700;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            white-space: nowrap;
+            text-align: center;
+            transition: background 0.15s, color 0.15s;
+        }
+        .tab-btn.active {
+            background: var(--surface);
+            color: var(--primary);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        }
+
+        .stats-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 4px;
+            font-size: 0.75rem;
+            padding-top: 3px;
+            border-top: 1px dashed var(--border);
+        }
+        .stat-badge {
+            padding: 2px 7px;
+            border-radius: 12px;
+            font-weight: 700;
+        }
+        .badge-corr { background: rgba(16, 185, 129, 0.12); color: var(--success); }
+        .badge-wrong { background: rgba(239, 68, 68, 0.12); color: var(--danger); }
+        .badge-streak { background: rgba(245, 158, 11, 0.15); color: var(--warning); }
+
+        .weak-btn {
+            background: transparent;
+            border: 1px solid var(--warning);
+            color: var(--warning);
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 0.72rem;
+            cursor: pointer;
+        }
+        .weak-btn.active {
+            background: var(--warning);
+            color: #fff;
+        }
+
+        .btn-text-sm {
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 0.72rem;
+            padding: 2px 4px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 8px 10px 50px;
+        }
+
+        .draw-panel {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 10px;
+            margin-bottom: 12px;
+            box-shadow: var(--shadow);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .draw-btn-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6px;
+            width: 100%;
+        }
+
+        .btn-draw {
+            padding: 8px 10px;
+            border: none;
+            border-radius: var(--radius-sm);
+            font-weight: 700;
+            font-size: 0.78rem;
+            color: #fff;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 4px;
+            height: 36px;
+            transition: opacity 0.15s, transform 0.1s;
+        }
+        .btn-draw:active:not(:disabled) {{ transform: scale(0.97); }}
+        .btn-draw:disabled { opacity: 0.4; cursor: not-allowed; }
+        .btn-draw.g1 { background: linear-gradient(135deg, var(--g1), #b45309); }
+        .btn-draw.g2 { background: linear-gradient(135deg, var(--g2), #1d4ed8); }
+        .btn-draw.mix { background: linear-gradient(135deg, var(--mixed), #6d28d9); }
+        .btn-draw.smart { background: linear-gradient(135deg, #ec4899, #be185d); }
+
+        .b-cnt {
+            background: rgba(255, 255, 255, 0.28);
+            padding: 1px 6px;
+            border-radius: 10px;
+            font-size: 0.7rem;
+            font-weight: 800;
+        }
+
+        .active-stage {
+            width: 100%;
+            min-height: 64px;
+            background: var(--surface-subtle);
+            border: 2px dashed var(--border);
+            border-radius: var(--radius-sm);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 8px 10px;
+            text-align: center;
+            transition: all 0.2s;
+        }
+        .active-stage.active {
+            border-style: solid;
+            border-color: var(--primary);
+            background: var(--surface);
+            box-shadow: 0 0 0 2px var(--primary-light);
+        }
+
+        .touch-hint {
+            font-size: 0.74rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: none;
+            text-align: center;
+            animation: pulse-hint 1.5s infinite;
+        }
+        @keyframes pulse-hint {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.75; transform: scale(0.98); }
+        }
+
+        .reform-card {
+            background: var(--card-bg);
+            color: var(--card-text);
+            padding: 8px 10px;
+            border-radius: var(--radius-sm);
+            font-size: 0.8rem;
+            font-weight: 600;
+            line-height: 1.35;
+            cursor: pointer;
+            user-select: none;
+            width: 100%;
+            transition: all 0.15s;
+            text-align: left;
+            position: relative;
+            box-shadow: var(--shadow);
+        }
+        .reform-card:active { transform: scale(0.98); }
+        .reform-card.selected {
+            box-shadow: 0 0 0 2.5px var(--primary);
+            background: #28374f;
+        }
+
+        .card-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 4px;
+        }
+
+        .btn-cue {
+            background: rgba(255, 255, 255, 0.22);
+            border: none;
+            color: #fef08a;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        .card-note {
+            font-size: 0.72rem;
+            color: #fef08a;
+            background: rgba(0, 0, 0, 0.35);
+            padding: 3px 6px;
+            border-radius: 4px;
+            border-left: 2px solid #facc15;
+            margin-top: 3px;
+            display: none;
+        }
+        .card-note.open { display: block; }
+
+        .sultan-col .reform-card {
+            font-size: 0.75rem;
+            padding: 6px 8px;
+            cursor: default;
+            margin-bottom: 4px;
+            border-left: 3px solid rgba(255, 255, 255, 0.4);
+            box-shadow: none;
+        }
+        .reform-card.correct { background: var(--success) !important; }
+        .reform-card.recovered { background: #d97706 !important; border-left-color: #fef08a !important; }
+        .reform-card.wrong {
+            animation: shake 0.4s;
+            background: var(--danger) !important;
+        }
+
+        .group-header-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 14px 0 6px;
+            padding-bottom: 4px;
+            border-bottom: 2px solid var(--border);
+        }
+        .sec-title {
+            font-size: 0.95rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .sec-title::before {
+            content: "";
+            width: 5px;
+            height: 14px;
+            background: var(--primary);
+            border-radius: 3px;
+        }
+        .btn-view-toggle {
+            background: var(--surface-subtle);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 3px 6px;
+            font-size: 0.68rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            cursor: pointer;
+        }
+
+        .sultan-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 6px;
+        }
+        .sultan-grid.single-col {
+            grid-template-columns: 1fr !important;
+        }
+
+        .sultan-col {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 8px 6px;
+            min-height: 140px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+            transition: background 0.15s, border-color 0.15s;
+        }
+        .sultan-col.target-ready {
+            border-color: var(--primary);
+            border-style: dashed;
+            background: var(--primary-light);
+        }
+
+        .col-header {
+            text-align: center;
+            padding-bottom: 6px;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 2px;
+        }
+        .col-name {
+            font-weight: 800;
+            font-size: 0.82rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: block;
+        }
+        .col-years {
+            font-size: 0.65rem;
+            color: var(--text-muted);
+            font-weight: 600;
+            display: block;
+            margin-top: 1px;
+        }
+
+        .tap-target-btn {
+            display: none;
+            background: var(--primary);
+            color: #fff;
+            font-size: 0.68rem;
+            font-weight: 700;
+            text-align: center;
+            padding: 3px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-bottom: 2px;
+        }
+        .sultan-col.target-ready .tap-target-btn { display: block; }
+
+        .all-pool-box {
+            display: none;
+            background: var(--surface);
+            border: 2px dashed var(--border);
+            border-radius: var(--radius-sm);
+            padding: 8px;
+            max-height: 220px;
+            overflow-y: auto;
+            margin-bottom: 12px;
+            -webkit-overflow-scrolling: touch;
+        }
+        .all-pool-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            justify-content: center;
+        }
+
+        .quiz-box {
+            display: none;
+            max-width: 500px;
+            margin: 6px auto;
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+        .quiz-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 14px 12px;
+            width: 100%;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        .quiz-pbar {
+            width: 100%;
+            height: 4px;
+            background: var(--surface-subtle);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+        .quiz-pbar-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, var(--primary), var(--success));
+            transition: width 0.25s;
+        }
+        .quiz-q {
+            font-size: 0.95rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            min-height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1.35;
+        }
+        .quiz-opts {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6px;
+        }
+        .btn-opt {
+            background: var(--surface);
+            border: 1.5px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 10px 6px;
+            font-weight: 700;
+            font-size: 0.78rem;
+            cursor: pointer;
+            transition: all 0.15s;
+            font-family: inherit;
+            color: var(--text);
+            min-height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .btn-opt:active:not(:disabled) { transform: scale(0.96); }
+        .btn-opt.correct { background: var(--success) !important; color: #fff !important; border-color: var(--success) !important; }
+        .btn-opt.wrong { background: var(--danger) !important; color: #fff !important; border-color: var(--danger) !important; animation: shake 0.4s; }
+        .quiz-feedback {
+            display: none;
+            margin-top: 10px;
+            padding: 8px 10px;
+            border-radius: var(--radius-sm);
+            font-size: 0.78rem;
+            text-align: left;
+        }
+        .btn-next-q {
+            display: none;
+            margin-top: 10px;
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: var(--radius-sm);
+            font-weight: 700;
+            font-size: 0.82rem;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .fc-box {
+            display: none;
+            max-width: 350px;
+            margin: 6px auto;
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        .fc-wrapper {
+            perspective: 1000px;
+            width: 100%;
+            height: 200px;
+            cursor: pointer;
+        }
+        .fc-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            transform-style: preserve-3d;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow);
+        }
+        .fc-inner.flipped { transform: rotateY(180deg); }
+        .fc-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            border-radius: var(--radius-md);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 16px;
+            border: 1px solid var(--border);
+            background: var(--surface);
+            text-align: center;
+        }
+        .fc-back {
+            transform: rotateY(180deg);
+            border-color: var(--primary);
+            background: linear-gradient(135deg, var(--surface), var(--surface-subtle));
+        }
+        .fc-controls {
+            display: flex;
+            gap: 8px;
+            width: 100%;
+        }
+        .btn-fc {
+            flex: 1;
+            padding: 10px;
+            border-radius: var(--radius-sm);
+            border: none;
+            font-weight: 700;
+            color: #fff;
+            cursor: pointer;
+            font-size: 0.82rem;
+            min-height: 42px;
+        }
+
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.65);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 12px;
+        }
+        .modal-overlay.show { display: flex; }
+        .modal-content {
+            background: var(--surface);
+            width: 100%;
+            max-width: 600px;
+            max-height: 88vh;
+            border-radius: var(--radius-md);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--border);
+        }
+        .modal-header {
+            padding: 10px 14px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .modal-body {
+            padding: 12px 14px;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .modal-footer {
+            padding: 10px 14px;
+            border-top: 1px solid var(--border);
+            background: var(--surface-subtle);
+            display: flex;
+            justify-content: space-between;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+        .form-input, .form-textarea, .form-select {
+            width: 100%;
+            padding: 8px;
+            background: var(--surface);
+            color: var(--text);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            font-size: 0.82rem;
+            font-family: inherit;
+        }
+        .edit-row {
+            display: flex;
+            gap: 4px;
+            align-items: center;
+            background: var(--surface-subtle);
+            padding: 6px;
+            border-radius: var(--radius-sm);
+            flex-wrap: wrap;
+        }
+
+        #confetti-canvas {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 2500;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .toast-wrap {
+            position: fixed;
+            bottom: max(16px, var(--sab));
+            right: 12px;
+            left: 12px;
+            z-index: 3000;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            pointer-events: none;
+            align-items: center;
+        }
+        .toast-item {
+            background: var(--card-bg);
+            color: #fff;
+            padding: 8px 14px;
+            border-radius: 20px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+            animation: fadeUp 0.25s;
+            pointer-events: auto;
+        }
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (min-width: 600px) {
+            .sultan-grid { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 10px; }
+            .draw-btn-grid { grid-template-columns: repeat(4, 1fr); }
+            .brand { max-width: none; font-size: 1.1rem; }
+        }
+    </style>
+</head>
+<body>
+    <canvas id="confetti-canvas"></canvas>
+
+    <div class="ios-install-banner" id="ios-banner">
+        <span>📲 <strong>iPhone SE İpucu:</strong> Safari'de <strong>Paylaş (⬆️) ➔ Ana Ekrana Ekle</strong> yaparak tam ekran uygulama olarak kullanabilirsiniz!</span>
+        <button class="btn-banner-close" onclick="App.dismissIosBanner()">✕</button>
+    </div>
+
+    <header class="navbar">
+        <div class="nav-inner">
+            <div class="nav-row-top">
+                <div class="brand">
+                    <span class="logo">🏛️</span>
+                    <span id="title-game">KPSS Tarih</span>
+                </div>
+                <div class="nav-actions">
+                    <button class="btn-icon" id="btn-sound" onclick="App.toggleSound()" title="Ses">🔊</button>
+                    <button class="btn-icon" id="btn-theme" onclick="App.toggleTheme()" title="Gece/Gündüz">🌙</button>
+                    <button class="btn-new-game" onclick="App.openCreator()"><span>➕</span> Yeni</button>
+                    <button class="btn-icon" onclick="App.openExport()" title="Dışa Aktar">📜</button>
+                </div>
+            </div>
+
+            <div class="game-select-wrap">
+                <select id="sel-game" class="game-select" onchange="App.switchGame(this.value)"></select>
+            </div>
+
+            <nav class="mode-tabs">
+                <button class="tab-btn active" data-m="draw" onclick="App.switchMode('draw')">🎯 Kura</button>
+                <button class="tab-btn" data-m="all" onclick="App.switchMode('all')">📋 Tümü</button>
+                <button class="tab-btn" data-m="quiz" onclick="App.switchMode('quiz')">🧠 Test</button>
+                <button class="tab-btn" data-m="fc" onclick="App.switchMode('fc')">🎴 Bilgi Kartı</button>
+                <button class="tab-btn" style="color:var(--warning)" onclick="App.openEditor()">✏️ Düzenle</button>
+            </nav>
+
+            <div class="stats-bar">
+                <div style="display:flex; gap:4px; align-items:center;">
+                    <span class="stat-badge badge-corr">✅ <span id="st-corr">0</span></span>
+                    <span class="stat-badge badge-wrong">❌ <span id="st-wrong">0</span></span>
+                    <span class="stat-badge badge-streak" id="badge-streak">🔥 <span id="st-streak">0</span></span>
+                </div>
+                <div style="display:flex; gap:6px; align-items:center;">
+                    <button class="weak-btn" id="btn-weak" onclick="App.toggleWeak()">🔁 Zayıf (<span id="st-weak">0</span>)</button>
+                    <button class="btn-text-sm" onclick="App.restartGame()">🔄 Sıfırla</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Draw Section -->
+        <section id="sec-draw" class="draw-panel">
+            <div class="draw-btn-grid">
+                <button class="btn-draw g1" id="b-draw-g1" onclick="App.draw('g1')">
+                    <span id="lbl-g1">1. Grup</span> <span class="b-cnt" id="cnt-g1">0</span>
+                </button>
+                <button class="btn-draw g2" id="b-draw-g2" onclick="App.draw('g2')">
+                    <span id="lbl-g2">2. Grup</span> <span class="b-cnt" id="cnt-g2">0</span>
+                </button>
+                <button class="btn-draw mix" id="b-draw-mix" onclick="App.draw('mix')">
+                    <span>Karışık</span> <span class="b-cnt" id="cnt-mix">0</span>
+                </button>
+                <button class="btn-draw smart" id="b-draw-smart" onclick="App.draw('smart')" title="Hatalara öncelik ver">
+                    <span>🎯 Akıllı</span> <span class="b-cnt" id="cnt-smart">0</span>
+                </button>
+            </div>
+            <div class="active-stage" id="draw-stage">
+                <span style="color:var(--text-muted); font-size:0.8rem;">🎲 Kura çekmek için butona dokunun</span>
+            </div>
+            <div class="touch-hint" id="touch-hint">👉 Kart hazır! Yerleştirmek istediğin sütuna dokun.</div>
+        </section>
+
+        <!-- All Pool Section -->
+        <section id="sec-all" class="all-pool-box">
+            <div class="all-pool-grid" id="all-grid"></div>
+        </section>
+
+        <!-- Quiz Section -->
+        <section id="sec-quiz" class="quiz-box">
+            <div class="quiz-card">
+                <div class="quiz-pbar"><div class="quiz-pbar-fill" id="quiz-fill"></div></div>
+                <div style="font-size:0.72rem; color:var(--text-muted); margin-bottom:4px;" id="quiz-info">KPSS Test Modu</div>
+                <div class="quiz-q" id="quiz-q">—</div>
+                <div class="quiz-opts" id="quiz-opts"></div>
+                <div class="quiz-feedback" id="quiz-fb"></div>
+                <button class="btn-next-q" id="btn-next-q" onclick="App.nextQuiz()">Sonraki Soru ➔</button>
+            </div>
+        </section>
+
+        <!-- Flashcard Section -->
+        <section id="sec-fc" class="fc-box">
+            <div class="fc-wrapper" onclick="App.flipFC()">
+                <div class="fc-inner" id="fc-inner">
+                    <div class="fc-face">
+                        <span style="font-size:0.7rem; color:var(--text-muted); font-weight:700;">BİLGİ KARTI</span>
+                        <div id="fc-q" style="font-size:1.05rem; font-weight:700; margin-top:8px;">—</div>
+                        <div style="font-size:0.68rem; color:var(--text-muted); margin-top:12px;">🔄 Çevirmek için dokun</div>
+                    </div>
+                    <div class="fc-face fc-back">
+                        <span style="font-size:0.7rem; color:var(--primary); font-weight:700;">AİT OLDUĞU DÖNEM</span>
+                        <div id="fc-a" style="font-size:1.15rem; font-weight:800; color:var(--primary); margin:6px 0;">—</div>
+                        <div id="fc-n" style="font-size:0.75rem; font-style:italic; color:var(--text-muted);"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="fc-controls">
+                <button class="btn-fc" style="background:var(--danger);" onclick="App.rateFC(false)">❌ Tekrar</button>
+                <button class="btn-fc" style="background:var(--success);" onclick="App.rateFC(true)">✅ Bildim</button>
+            </div>
+        </section>
+
+        <!-- Dynamic Groups and Columns -->
+        <div id="groups-container">
+            <div id="wrap-g1">
+                <div class="group-header-wrap">
+                    <h2 class="sec-title" id="title-g1">1. Grup</h2>
+                    <button class="btn-view-toggle" onclick="App.toggleGridLayout('grid-g1', this)">📱 2'li / Tekli</button>
+                </div>
+                <div class="sultan-grid" id="grid-g1"></div>
+            </div>
+            <div id="wrap-g2">
+                <div class="group-header-wrap">
+                    <h2 class="sec-title" id="title-g2">2. Grup</h2>
+                    <button class="btn-view-toggle" onclick="App.toggleGridLayout('grid-g2', this)">📱 2'li / Tekli</button>
+                </div>
+                <div class="sultan-grid" id="grid-g2"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal: Game Creator -->
+    <div class="modal-overlay" id="modal-creator">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 style="font-weight:800; font-size:0.95rem;">➕ Yeni Oyun Kur</h3>
+                <button class="btn-icon" onclick="App.closeModals()">✕</button>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <label style="font-size:0.75rem; font-weight:700;">Oyun Adı:</label>
+                    <input type="text" id="c-title" class="form-input" placeholder="Örn: Kurtuluş Savaşı Dönemi">
+                </div>
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px;">
+                    <div>
+                        <label style="font-size:0.72rem; font-weight:700;">1. Grup Adı & Buton:</label>
+                        <input type="text" id="c-g1-t" class="form-input" placeholder="Grup 1 Adı">
+                        <input type="text" id="c-g1-b" class="form-input" placeholder="Buton Metni" style="margin-top:2px;">
+                    </div>
+                    <div>
+                        <label style="font-size:0.72rem; font-weight:700;">2. Grup Adı & Buton:</label>
+                        <input type="text" id="c-g2-t" class="form-input" placeholder="Grup 2 Adı">
+                        <input type="text" id="c-g2-b" class="form-input" placeholder="Buton Metni" style="margin-top:2px;">
+                    </div>
+                </div>
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <strong style="font-size:0.8rem;">Sütunlar / Kategoriler</strong>
+                    <button class="btn-new-game" style="padding:4px 8px; font-size:0.72rem;" onclick="App.addCreatorCat()">+ Sütun</button>
+                </div>
+                <div id="c-cat-list" style="display:flex; flex-direction:column; gap:4px;"></div>
+
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <strong style="font-size:0.8rem;">İçerik Maddeleri</strong>
+                    <button class="btn-new-game" style="padding:4px 8px; font-size:0.72rem;" onclick="App.addCreatorItem()">+ Madde</button>
+                </div>
+                <div style="background:var(--surface-subtle); padding:6px; border-radius:6px; font-size:0.72rem;">
+                    <strong>⚡ Toplu Yükleme:</strong> Her satıra <code>Madde | Sütun Adı | Not</code> yazın:
+                    <textarea id="c-bulk" class="form-textarea" rows="2" placeholder="Madde | Sütun | Not"></textarea>
+                    <button class="btn-new-game" style="margin-top:4px; padding:3px 8px; font-size:0.7rem;" onclick="App.importBulkCreator()">Toplu Ekle</button>
+                </div>
+                <div id="c-item-list" style="display:flex; flex-direction:column; gap:4px;"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-text-sm" onclick="App.clearCreator()">Temizle</button>
+                <button class="btn-new-game" onclick="App.saveNewGame()">💾 Oyunu Kaydet</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Content Editor -->
+    <div class="modal-overlay" id="modal-editor">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 style="font-weight:800; font-size:0.95rem;">✏️ Maddeleri Düzenle</h3>
+                <button class="btn-icon" onclick="App.closeModals()">✕</button>
+            </div>
+            <div class="modal-body" id="editor-items"></div>
+            <div class="modal-footer">
+                <button class="btn-new-game" onclick="App.addEditorItem()">+ Yeni Madde</button>
+                <button class="btn-new-game" style="background:var(--success);" onclick="App.saveEditor()">💾 Kaydet</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Export & Backup -->
+    <div class="modal-overlay" id="modal-export">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 style="font-weight:800; font-size:0.95rem;">📜 Dışa Aktar & Yedekle</h3>
+                <button class="btn-icon" onclick="App.closeModals()">✕</button>
+            </div>
+            <div class="modal-body">
+                <div style="display:flex; gap:6px; flex-wrap:wrap;">
+                    <button class="btn-new-game" onclick="App.downloadHTML()">💾 Bağımsız HTML İndir</button>
+                    <button class="btn-new-game" style="background:var(--g2);" onclick="App.downloadJSON()">📦 JSON İndir</button>
+                    <button class="btn-new-game" style="background:var(--warning);" onclick="document.getElementById('file-json').click()">📥 JSON Yükle</button>
+                    <input type="file" id="file-json" style="display:none;" accept=".json" onchange="App.importJSON(event)">
+                </div>
+                <textarea id="exp-text" class="form-textarea" rows="6" readonly style="font-family:monospace; font-size:0.7rem; margin-top:6px;"></textarea>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-text-sm" onclick="App.restoreDefaults()">⚠️ Varsayılana Sıfırla</button>
+                <button class="btn-new-game" onclick="App.copyCode()">📋 Kopyala</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Completion Score -->
+    <div class="modal-overlay" id="modal-completion">
+        <div class="modal-content" style="max-width:450px;">
+            <div class="modal-header">
+                <h3 style="font-weight:800; font-size:0.95rem;">🎉 Tur Tamamlandı!</h3>
+                <button class="btn-icon" onclick="App.closeModals()">✕</button>
+            </div>
+            <div class="modal-body" style="text-align:center;">
+                <div style="font-size:38px;">🏆</div>
+                <p id="comp-summary" style="font-size:0.88rem; margin:8px 0;"></p>
+                <div style="text-align:left; background:var(--surface-subtle); padding:8px; border-radius:6px;">
+                    <strong style="font-size:0.75rem; color:var(--danger);">🔁 En Çok Karıştırılan Konular:</strong>
+                    <div id="comp-weak" style="max-height:140px; overflow-y:auto; margin-top:4px; display:flex; flex-direction:column; gap:3px; font-size:0.74rem;"></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-new-game" style="background:var(--danger);" onclick="App.closeModals(); App.setWeak(true); App.restartGame();">🔁 Hataları Çalış</button>
+                <button class="btn-new-game" onclick="App.closeModals(); App.restartGame();">🔄 Baştan Başla</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast-wrap" id="toasts"></div>
+
+    <script id="game-seed">
+        const INITIAL_DATA = [
+            {
+                "id": "g_default",
+                "title": "Osmanlı Islahatları Oyunu",
+                "g1Title": "18. Yüzyıl Islahatçıları",
+                "g2Title": "19. Yüzyıl Islahatçıları",
+                "g1Btn": "18. YY Çek",
+                "g2Btn": "19. YY Çek",
+                "cats1": [
+                    { "id": "s3ahmet", "name": "3. Ahmet", "years": "1703-1730" },
+                    { "id": "s1mahmut", "name": "1. Mahmut", "years": "1730-1754" },
+                    { "id": "s3mustafa", "name": "3. Mustafa", "years": "1757-1774" },
+                    { "id": "s1hamit", "name": "1. Abdülhamit", "years": "1774-1789" },
+                    { "id": "s3selim", "name": "3. Selim", "years": "1789-1807" }
+                ],
+                "cats2": [
+                    { "id": "s2mahmut", "name": "II. Mahmut", "years": "1808-1839" },
+                    { "id": "smecid", "name": "Abdülmecid", "years": "1839-1861" },
+                    { "id": "saziz", "name": "Abdülaziz", "years": "1861-1876" },
+                    { "id": "s2hamit", "name": "II. Abdülhamit", "years": "1876-1909" }
+                ],
+                "items": [
+                    { "id": "r1", "text": "Matbaa getirilmesi (İbrahim Müteferrika ve Sait Efendi)", "catId": "s3ahmet", "group": 1, "note": "Lale Devri ilk sivil teknik yeniliği." },
+                    { "id": "r2", "text": "İlk Basılan Eser (Vani Mehmet Efendi - Vankulu Lugatı)", "catId": "s3ahmet", "group": 1, "note": "Matbaada basılan ilk Türkçe sözlük." },
+                    { "id": "r3", "text": "İlk Geçici Elçilikler (Paris, Moskova, Viyana, Varşova)", "catId": "s3ahmet", "group": 1, "note": "Batı'yı tanıma amaçlı ilk temsilcilikler." },
+                    { "id": "r4", "text": "28 Mehmet Çelebi Paris Sefaretnamesi", "catId": "s3ahmet", "group": 1, "note": "Batı'ya açılan ilk pencere kabul edilir." },
+                    { "id": "r5", "text": "İran’dan çiçek aşısının getirilmesi", "catId": "s3ahmet", "group": 1, "note": "Doğudan alınan ilk sağlık ıslahatı." },
+                    { "id": "r6", "text": "Tulumbacılar Ocağı (Yeniçeri İtfaiyesi)", "catId": "s3ahmet", "group": 1, "note": "Gerçek Davut önderliğinde yangın teşkilatı." },
+                    { "id": "r7", "text": "Lale Devri (1718 Pasarofça - 1730 Patrona Halil)", "catId": "s3ahmet", "group": 1, "note": "Nevşehirli Damat İbrahim Paşa dönemi." },
+                    { "id": "r8", "text": "İlk Defa Batı tarzı Askeri Islahat Yapılması", "catId": "s1mahmut", "group": 1, "note": "Avrupa askeri teşkilatı ilk kez örnek alındı." },
+                    { "id": "r9", "text": "Humbaracı Ocağı'nın Batı tarzında ıslahı", "catId": "s1mahmut", "group": 1, "note": "Topçu ve havan topu birlikleri modernize edildi." },
+                    { "id": "r10", "text": "Comte de Bonneval (Humbaracı Ahmet Paşa)", "catId": "s1mahmut", "group": 1, "note": "Fransız asıllı askeri uzman ve danışman." },
+                    { "id": "r11", "text": "Hendesehane'nin Açılması (İlk Askeri Mühendislik)", "catId": "s1mahmut", "group": 1, "note": "İlk Batılı askeri teknik yüksekokul." },
+                    { "id": "r12", "text": "Esham Sistemini Uygulamaya Koyması (İç Borçlanma)", "catId": "s3mustafa", "group": 1, "note": "Kağıt senetlerle ilk iç borçlanma." },
+                    { "id": "r13", "text": "Baron de Tott'un Getirilmesi", "catId": "s3mustafa", "group": 1, "note": "Fransız topçu ve istihkam uzmanı." },
+                    { "id": "custom_1788602683046", "text": "Sürat Topçuları Ocağı", "catId": "s3mustafa", "group": 1, "note": "Hızlı ateş edebilen hafif topçu birliği." },
+                    { "id": "r14", "text": "Bilim adamlarına kıyafet ve din zorunluluğunu kaldırdı", "catId": "s1hamit", "group": 1, "note": "Yabancı uzmanların Müslüman olma şartı esnetildi." },
+                    { "id": "r15", "text": "Mühendishane-i Bahri Hümayun (Deniz Mühendishanesi)", "catId": "s1hamit", "group": 1, "note": "Tersane ve donanma subayı yetiştirmek için." },
+                    { "id": "custom_1788602766876", "text": "Cülus Bahşişi Yasağı", "catId": "s1hamit", "group": 1, "note": "Hazine yükünü hafifletmek için tahta çıkış bahşişi kaldırıldı." },
+                    { "id": "custom_1788602791632", "text": "Ulufe Alım Satım Yasağı", "catId": "s1hamit", "group": 1, "note": "Yeniçeri esame ticaretine son verildi." },
+                    { "id": "r16", "text": "Nizam-ı Cedit Ordusu ve Dönemi", "catId": "s3selim", "group": 1, "note": "Yeni düzen; üniformalı ve kışlalı ordu." },
+                    { "id": "r17", "text": "Fransızca'nın Askeri Okullarda Zorunlu İlk Yabancı Dil Olması", "catId": "s3selim", "group": 1, "note": "Askeri literatür Fransızca okutuldu." },
+                    { "id": "r18", "text": "Kabakçı Mustafa İsyanı ile Döneminin Sona Ermesi", "catId": "s3selim", "group": 1, "note": "1807'de yenilik karşıtı yeniçeri ayaklanması." },
+                    { "id": "r19", "text": "İlk Kalıcı (Daimi) Elçilik: Londra - Yusuf Agah Efendi", "catId": "s3selim", "group": 1, "note": "Daimi elçilik statüsünde ilktir." },
+                    { "id": "r20", "text": "Mühendishane-i Berri Hümayun (Kara Mühendishanesi)", "catId": "s3selim", "group": 1, "note": "Kara ordusu topçu ve tahkimat subayı okulu." },
+                    { "id": "r21", "text": "İrad-ı Cedit Hazinesi", "catId": "s3selim", "group": 1, "note": "Nizam-ı Cedit harcamaları için ayrılan özel bütçe." },
+                    { "id": "r22", "text": "Fransa - Akka Kuşatması / Cezzar Ahmet Paşa (El-Ariş)", "catId": "s3selim", "group": 1, "note": "Nizam-ı Cedit'in Napolyon'a karşı ilk zaferi." },
+                    { "id": "r23", "text": "Sened-i İttifak (1808)", "catId": "s2mahmut", "group": 2, "note": "Ayanlarla imzalanan padişah yetkisini sınırlayan ilk belge." },
+                    { "id": "r24", "text": "Ayanlık Kaldırıldı, Köylere Muhtar, Eyaletlere Müşir Atandı", "catId": "s2mahmut", "group": 2, "note": "Merkezi otoriteyi tüm ülkeye yayma adımı." },
+                    { "id": "r25", "text": "Devlet Dairelerine Resmini Astırdı (Tasvir-i Hümayun)", "catId": "s2mahmut", "group": 2, "note": "Modern devlet otoritesinin simgesi." },
+                    { "id": "r26", "text": "İhtisap Nezareti (Zabıta Teşkilatı)", "catId": "s2mahmut", "group": 2, "note": "Belediye ve çarşı denetimi." },
+                    { "id": "r27", "text": "Pasaport Uygulamasına Geçildi", "catId": "s2mahmut", "group": 2, "note": "Yurtdışı seyahatlerin kontrolü." },
+                    { "id": "r28", "text": "İstanbul’a Girişler İçin Mürur Tezkeresi", "catId": "s2mahmut", "group": 2, "note": "İç pasaport ve İstanbul nüfus kontrolü." },
+                    { "id": "r29", "text": "Takvim-i Vekayi (İlk Resmi Gazete)", "catId": "s2mahmut", "group": 2, "note": "1831 yılında fermanları duyurmak için çıktı." },
+                    { "id": "r30", "text": "Heyet-i Vükela (Bakanlar Kurulu / Nezaretler)", "catId": "s2mahmut", "group": 2, "note": "Divan yerine modern bakanlıklar kuruldu." },
+                    { "id": "r31", "text": "Sekban-ı Cedit ve Eşkinci Ocağı", "catId": "s2mahmut", "group": 2, "note": "Yeniçerilere alternatif ara birlikler." },
+                    { "id": "r32", "text": "1826 Yeniçeri Ocağı'nın Kaldırılması (Vaka-i Hayriye)", "catId": "s2mahmut", "group": 2, "note": "Islahatların önündeki en büyük engel kalktı." },
+                    { "id": "r33", "text": "Asakir-i Mansure-i Muhammediye Ordusu", "catId": "s2mahmut", "group": 2, "note": "Yeniçerilerin yerine kurulan düzenli ordu." },
+                    { "id": "r34", "text": "Mekteb-i Şahane (Harbiye) ve Mekteb-i Tıbbiye", "catId": "s2mahmut", "group": 2, "note": "Modern subay ve tabip yetiştiren okullar." },
+                    { "id": "r35", "text": "Köy ve Kasabalar İçin Redif Birlikleri", "catId": "s2mahmut", "group": 2, "note": "Taşra güvenliği için yedek ordu." },
+                    { "id": "r36", "text": "Avrupa’ya İlk Eğitim Amaçlı Öğrenci Gönderilmesi", "catId": "s2mahmut", "group": 2, "note": "Genç Osmanlılar kuşağının doğuşu." },
+                    { "id": "r37", "text": "Karantina Teşkilatı Kuruldu", "catId": "s2mahmut", "group": 2, "note": "Salgın hastalıklara karşı sağlık kordonu." },
+                    { "id": "r38", "text": "Sadece İstanbul'da İlköğretim Zorunlu Hale Getirildi", "catId": "s2mahmut", "group": 2, "note": "Eğitimde ilk zorunluluk kararı." },
+                    { "id": "r39", "text": "Donizetti Paşa - Mızıka-i Hümayun", "catId": "s2mahmut", "group": 2, "note": "Mehteran kapatılarak Batı tarzı bando kuruldu." },
+                    { "id": "r40", "text": "Tercüme Odaları Kuruldu", "catId": "s2mahmut", "group": 2, "note": "Türk diplomat ve çevirmen yetiştirildi." },
+                    { "id": "r41", "text": "Osmanlıcılık Fikrinin Devlet Politikası Haline Gelmesi", "catId": "s2mahmut", "group": 2, "note": "'Tebaamdan Müslümanı camide, Hristiyanı kilisede...' ilkesi." },
+                    { "id": "r42", "text": "Tanzimat Fermanı (Gülhane Hatt-ı Hümayunu - 1839)", "catId": "smecid", "group": 2, "note": "Mustafa Reşit Paşa okudu. Kanun üstünlüğü ilkesi." },
+                    { "id": "r43", "text": "Islahat Fermanı (1856 Paris Barış Konferansı)", "catId": "smecid", "group": 2, "note": "Gayrimüslimlere tam eşitlik getiren ferman." },
+                    { "id": "r44", "text": "Encümen-i Daniş (Bilimler Akademisi)", "catId": "smecid", "group": 2, "note": "Ders kitaplarını hazırlamak için kurulan akademi." },
+                    { "id": "r45", "text": "Jandarma, Polis ve Posta Teşkilatı", "catId": "smecid", "group": 2, "note": "Modern iç güvenlik ve posta ağı." },
+                    { "id": "r46", "text": "Meclis-i Maarif-i Umumiye (MEB'in Temeli)", "catId": "smecid", "group": 2, "note": "Milli eğitim teşkilatlanması." },
+                    { "id": "r47", "text": "İzmir - Aydın Demiryolu Hattı", "catId": "smecid", "group": 2, "note": "Anadolu'daki ilk demiryolu hattı." },
+                    { "id": "r48", "text": "İlk Telgraf Hattı (Kırım Savaşı: Edirne-İst-Şumnu)", "catId": "smecid", "group": 2, "note": "Kırım Savaşı haberleşmesi için çekildi." },
+                    { "id": "r49", "text": "İlk Dış Borç Alındı (İngiltere - Kırım Savaşı)", "catId": "smecid", "group": 2, "note": "1854'te savaş finansmanı için alındı." },
+                    { "id": "r50", "text": "Bank-ı Dersaadet (İlk Osmanlı Bankası)", "catId": "smecid", "group": 2, "note": "Galata bankerleri ortaklığıyla kuruldu." },
+                    { "id": "r51", "text": "Bank-ı Osmani (İlk Para Basma İmtiyazlı Banka)", "catId": "smecid", "group": 2, "note": "İngiliz-Fransız sermayeli emisyon bankası." },
+                    { "id": "r52", "text": "Şinasi ve Agah Efendi: Tercüman-ı Ahval (İlk Özel Gazete)", "catId": "smecid", "group": 2, "note": "İlk tiyatro eseri Şair Evlenmesi burada basıldı." },
+                    { "id": "r53", "text": "İlk Kağıt Para Basıldı (Kaime-i Mutebere)", "catId": "smecid", "group": 2, "note": "Faiz getirili ilk kağıt para." },
+                    { "id": "r54", "text": "Güllü Agop - İlk Modern Osmanlı Tiyatrosu", "catId": "smecid", "group": 2, "note": "Gedikpaşa Tiyatrosu." },
+                    { "id": "r55", "text": "Kuleli Vakası (1859 - Padişaha Suikast Girişimi)", "catId": "smecid", "group": 2, "note": "Fedailer Cemiyeti darbe teşebbüsü." },
+                    { "id": "r56", "text": "Divan-ı Ahkam-ı Adliye (Yargıtay'ın Temeli)", "catId": "saziz", "group": 2, "note": "Ahmet Cevdet Paşa başkanlığında kuruldu." },
+                    { "id": "r57", "text": "Şûra-yı Devlet (Danıştay'ın Temeli)", "catId": "saziz", "group": 2, "note": "Mithat Paşa öncülüğünde idari yargı organı." },
+                    { "id": "r58", "text": "Mecelle Hazırlandı (Ahmet Cevdet Paşa)", "catId": "saziz", "group": 2, "note": "İslam hukukuna dayalı ilk Türk medeni kanunu." },
+                    { "id": "r59", "text": "Memleket Sandıkları Kuruldu (Mithat Paşa)", "catId": "saziz", "group": 2, "note": "Ziraat Bankası'nın çekirdeği." },
+                    { "id": "r60", "text": "Dünyanın 3. Büyük Deniz Donanma Filosu Kuruldu", "catId": "saziz", "group": 2, "note": "Avrupa'dan zırhlı gemiler satın alındı." },
+                    { "id": "r61", "text": "İlk Defa Seyahat Amaçlı Yurtdışı Gezisi Yapılması", "catId": "saziz", "group": 2, "note": "Avrupa başkentlerini barışçıl ziyaret eden ilk padişah." },
+                    { "id": "r62", "text": "Yenilik Yapmadığı ve Borçlar Gerekçesiyle Tahttan İndirilen İlk Padişah", "catId": "saziz", "group": 2, "note": "1876 askeri darbesiyle indirildi." },
+                    { "id": "r63", "text": "Müze-i Hümayun (Asar-ı Atika) - Osman Hamdi Bey", "catId": "s2hamit", "group": 2, "note": "Arkeoloji Müzesi ve müzeciliğin temeli." },
+                    { "id": "r64", "text": "Memleket Sandıkları Ziraat Bankası'na Dönüştürüldü (1888)", "catId": "s2hamit", "group": 2, "note": "Resmi Ziraat Bankası kuruluşu." },
+                    { "id": "r65", "text": "Sanayi-i Nefise Mektebi (Güzel Sanatlar)", "catId": "s2hamit", "group": 2, "note": "Mimar Sinan Güzel Sanatlar Üniversitesi'nin temeli." },
+                    { "id": "r66", "text": "II. Wilhelm Dostluğu - 3B Projesi (Berlin-Boğazlar-Bağdat)", "catId": "s2hamit", "group": 2, "note": "Alman demiryolu imtiyazı." },
+                    { "id": "r67", "text": "31 Mart İsyanı (1909)", "catId": "s2hamit", "group": 2, "note": "Meşrutiyete karşı ilk irticai ayaklanma. Hareket Ordusu bastırdı." },
+                    { "id": "r68", "text": "Hasan Fehmi - İlk Basın Şehidi (Serbesti Gazetesi)", "catId": "s2hamit", "group": 2, "note": "31 Mart olaylarını ateşleyen suikast." },
+                    { "id": "r69", "text": "II. Meşrutiyet'in İlan Edilmesi (1908)", "catId": "s2hamit", "group": 2, "note": "İttihat ve Terakki baskısıyla ilan edildi." },
+                    { "id": "r70", "text": "Muharrem Kararnamesi (1881)", "catId": "s2hamit", "group": 2, "note": "Devletin mali iflas kararnamesi." },
+                    { "id": "r71", "text": "Düyun-u Umumiye İdaresi Kuruldu", "catId": "s2hamit", "group": 2, "note": "Avrupalı alacaklıların kurduğu dış borçlar idaresi." },
+                    { "id": "r72", "text": "Reval Görüşmeleri (1908 İngiltere - Rusya)", "catId": "s2hamit", "group": 2, "note": "Osmanlı topraklarını paylaşma planı." },
+                    { "id": "r73", "text": "1876 Kanun-i Esasi (I. Meşrutiyet)", "catId": "s2hamit", "group": 2, "note": "Türk tarihinin ilk yazılı anayasası." }
+                ]
+            },
+            {
+                "id": "game_inkilap",
+                "title": "İnkılap Tarihi ve Atatürk Dönemi",
+                "g1Title": "1920 - 1928 Yılları",
+                "g2Title": "1929 - 1938 Yılları",
+                "g1Btn": "1920-1928 Çek",
+                "g2Btn": "1929-1938 Çek",
+                "cats1": [
+                    { "id": "cat_1920", "name": "1920", "years": "TBMM ve Teşkilatlanma" },
+                    { "id": "cat_1921", "name": "1921", "years": "Anayasa ve Maarif" },
+                    { "id": "cat_1922", "name": "1922", "years": "Saltanatın Sonu" },
+                    { "id": "cat_1923", "name": "1923", "years": "Cumhuriyet ve Başkent" },
+                    { "id": "cat_1924", "name": "1924", "years": "Laiklik ve Tevhid-i Tedrisat" },
+                    { "id": "cat_1925", "name": "1925", "years": "Şapka, Aşar, Tekkeler" },
+                    { "id": "cat_1926", "name": "1926", "years": "Medeni Kanun ve Kabotaj" },
+                    { "id": "cat_1927", "name": "1927", "years": "Teşvik-i Sanayi" },
+                    { "id": "cat_1928", "name": "1928", "years": "Harf İnkılabı ve Millet Mektepleri" }
+                ],
+                "cats2": [
+                    { "id": "cat_1929", "name": "1929", "years": "Büyük Buhran ve Kanunlar" },
+                    { "id": "cat_1930", "name": "1930", "years": "Merkez Bankası ve Kadın Hakları" },
+                    { "id": "cat_1931", "name": "1931", "years": "Türk Tarih Kurumu ve Ölçüler" },
+                    { "id": "cat_1932", "name": "1932", "years": "Türk Dil Kurumu ve Halkevleri" },
+                    { "id": "cat_1933", "name": "1933", "years": "Üniversite ve 1. Beş Yıllık Plan" },
+                    { "id": "cat_1934", "name": "1934", "years": "Soyadı Kanunu ve Kadın MV" },
+                    { "id": "cat_1935", "name": "1935", "years": "MTA, Etibank ve Tatil Günü" },
+                    { "id": "cat_1936", "name": "1936", "years": "Montrö ve Çubuk Barajı" },
+                    { "id": "cat_1937", "name": "1937", "years": "Denizbank ve İlkeler Anayasada" },
+                    { "id": "cat_1938", "name": "1938", "years": "Toprak Mahsulleri Ofisi" }
+                ],
+                "items": [
+                    { "id": "i_1920_1", "text": "TBMM'nin Açılması (23 Nisan)", "catId": "cat_1920", "group": 1, "note": "Milli iradenin tecelli ettiği ve yeni devletin kurulduğu gün." },
+                    { "id": "i_1920_2", "text": "Sıhhiye Nazırlığı ve Yeşilay'ın Kurulması", "catId": "cat_1920", "group": 1, "note": "Sağlık ve halkı zararlı alışkanlıklardan koruma teşkilatı." },
+                    { "id": "i_1921_1", "text": "Teşkilat-ı Esasiye Anayasası (20 Ocak)", "catId": "cat_1921", "group": 1, "note": "Yeni Türk Devleti'nin ilk kurucu çerçeve anayasası." },
+                    { "id": "i_1921_2", "text": "1. Maarif Kongresi (Eskişehir-Kütahya Savaşları Sırasında)", "catId": "cat_1921", "group": 1, "note": "Savaş ortamında dahi eğitime verilen önemin simgesi." },
+                    { "id": "i_1921_3", "text": "Çocuk Esirgeme Kurumu (Himaye-i Etfal)", "catId": "cat_1921", "group": 1, "note": "Şehit yetimleri ve muhtaç çocuklar için sosyal yardım." },
+                    { "id": "i_1922_1", "text": "Saltanatın Kaldırılışı (1 Kasım)", "catId": "cat_1922", "group": 1, "note": "Lozan'a tek temsilci olarak katılmak ve iki başlılığı bitirmek için." },
+                    { "id": "i_1923_1", "text": "Ankara'nın Başkent Oluşu (13 Ekim)", "catId": "cat_1923", "group": 1, "note": "Jeopolitik konumu ve Milli Mücadele'nin karargahı olması sebebiyle." },
+                    { "id": "i_1923_2", "text": "Cumhuriyet'in İlanı (29 Ekim)", "catId": "cat_1923", "group": 1, "note": "Devletin rejim tartışması bitti, ilk Cumhurbaşkanı M. Kemal Paşa." },
+                    { "id": "i_1923_3", "text": "İzmir İktisat Kongresi ve Misak-ı İktisadi", "catId": "cat_1923", "group": 1, "note": "Milli ekonomi ilkeleri ve yerli malı üretimi hedeflendi." },
+                    { "id": "i_1923_4", "text": "Hilal-i Ahmer'in Kızılay'a Dönüştürülmesi", "catId": "cat_1923", "group": 1, "note": "Kızılay cemiyetinin milli kurumsallaşması." },
+                    { "id": "i_1924_1", "text": "Halifeliğin Kaldırılması (3 Mart)", "catId": "cat_1924", "group": 1, "note": "Laik devlet düzeninin en büyük dönüm noktası adımı." },
+                    { "id": "i_1924_2", "text": "Tevhid-i Tedrisat Kanunu (3 Mart)", "catId": "cat_1924", "group": 1, "note": "Tüm okullar MEB çatısı altında birleştirildi, ikilik bitti." },
+                    { "id": "i_1924_3", "text": "Şeriye ve Evkaf Vekaleti yerine D.İ.B ve Vakıflar Gn. Md.", "catId": "cat_1924", "group": 1, "note": "Din ve siyaset birbirinden tamamen ayrıştırıldı." },
+                    { "id": "i_1924_4", "text": "Erkan-ı Harbiye yerine Gnkur. Bşk. ve MSB", "catId": "cat_1924", "group": 1, "note": "Ordu mensuplarının aktif siyaset yapması yasaklandı." },
+                    { "id": "i_1924_5", "text": "Medreselerin Kapatılması (11 Mart)", "catId": "cat_1924", "group": 1, "note": "Çağdaş ve laik eğitim önündeki medrese yapısı lağvedildi." },
+                    { "id": "i_1924_6", "text": "1924 Anayasası (20 Nisan)", "catId": "cat_1924", "group": 1, "note": "Karma hükümet sistemi ve Cumhuriyet devrinin ilk temel anayasası." },
+                    { "id": "i_1924_7", "text": "Türkiye İş Bankası'nın Kurulması", "catId": "cat_1924", "group": 1, "note": "Cumhuriyet'in ilk özel milli bankası (Celal Bayar)." },
+                    { "id": "i_1924_8", "text": "TCDD'nin Kurulması", "catId": "cat_1924", "group": 1, "note": "Demiryolları millileştirildi ve devlet tekeline alındı." },
+                    { "id": "i_1925_1", "text": "Şapka Kanunu (Kastamonu Gezisi sonrası)", "catId": "cat_1925", "group": 1, "note": "Çağdaş kılık kıyafete geçişin ilk adımı." },
+                    { "id": "i_1925_2", "text": "Tekke, Zaviye ve Türbelerin Kapatılması", "catId": "cat_1925", "group": 1, "note": "'Türkiye Cumhuriyeti şeyhler, dervişler memleketi olamaz'." },
+                    { "id": "i_1925_3", "text": "Aşar Vergisinin Kaldırılması", "catId": "cat_1925", "group": 1, "note": "Köylüyü ezen şer'i ürün vergisi kaldırılarak rahatlatıldı." },
+                    { "id": "i_1925_4", "text": "Miladi Takvimin ve Alaturka Saat Yerine Yeni Saatin Kabulü", "catId": "cat_1925", "group": 1, "note": "Batı dünyası ile ticari ve idari uyumu yakalamak için yapıldı." },
+                    { "id": "i_1925_5", "text": "Türk Tayyare Cemiyeti (THK) ve Kayseri Uçak Fabrikası", "catId": "cat_1925", "group": 1, "note": "'İstikbal göklerdedir' ülküsüyle ilk havacılık fabrikası." },
+                    { "id": "i_1925_6", "text": "Atatürk Orman Çiftliği'nin Kurulması", "catId": "cat_1925", "group": 1, "note": "Bataklık kurutularak modern tarım istasyonu kuruldu." },
+                    { "id": "i_1926_1", "text": "Türk Medeni Kanunu'nun Kabulü (İsviçre'den)", "catId": "cat_1926", "group": 1, "note": "Tek eşlilik, resmi nikah, mirasta kadın-erkek eşitliği, mahkemede eşit şahitlik." },
+                    { "id": "i_1926_2", "text": "Kabotaj Kanunu (1 Temmuz)", "catId": "cat_1926", "group": 1, "note": "Türk karasularında deniz ticareti hakkı Türk gemicilerine verildi." },
+                    { "id": "i_1926_3", "text": "Türk Ceza Kanunu (İtalya'dan)", "catId": "cat_1926", "group": 1, "note": "Ceza hukukunun modernleştirilmesi." },
+                    { "id": "i_1926_4", "text": "Türk Borçlar Kanunu (İsviçre'den)", "catId": "cat_1926", "group": 1, "note": "Özel hukuk sözleşmelerini modernleştirdi." },
+                    { "id": "i_1926_5", "text": "Maarif Teşkilatı Kanunu", "catId": "cat_1926", "group": 1, "note": "Eğitim müfredatı bilimselleştirildi, izinsiz okul açılması yasaklandı." },
+                    { "id": "i_1927_1", "text": "Teşvik-i Sanayi Kanunu", "catId": "cat_1927", "group": 1, "note": "Özel sektörü canlandırmak istendi fakat sermaye yetersizliği yüzünden uygulanamadı." },
+                    { "id": "i_1928_1", "text": "Yeni Türk Harflerinin Kabulü (Harf Devrimi - 1 Kasım)", "catId": "cat_1928", "group": 1, "note": "Latin esaslı Türk alfabesine geçilerek okuma yazma kolaylaştırıldı." },
+                    { "id": "i_1928_2", "text": "Millet Mektepleri'nin Açılması (24 Kasım)", "catId": "cat_1928", "group": 1, "note": "Halka yeni alfabeyi öğretmek için seferberlik. Atatürk 'Başöğretmen' oldu." },
+                    { "id": "i_1928_3", "text": "Uluslararası Rakamların Kabul Edilmesi", "catId": "cat_1928", "group": 1, "note": "Arap rakamları yerine uluslararası rakamlara geçildi." },
+                    { "id": "i_1928_4", "text": "'Devletin Dini İslamdır' Maddesinin Anayasadan Çıkarılması", "catId": "cat_1928", "group": 1, "note": "1924 anayasasında laikleşme yolundaki en kritik madde değişikliği." },
+                    { "id": "i_1929_1", "text": "Ceza Muhakemeleri Usulü (Almanya) ve İdare Kanunu (Fransa)", "catId": "cat_1929", "group": 2, "note": "Yargılama usulleri modernize edildi." },
+                    { "id": "i_1929_2", "text": "Türk Parasını Koruma Kanunu ve Koruyucu Gümrük Yasası", "catId": "cat_1929", "group": 2, "note": "1929 Dünya Ekonomik Buhranı'na karşı milli savunma tedbiri." },
+                    { "id": "i_1930_1", "text": "Kadınlara Belediye Seçimlerine Katılma Hakkı", "catId": "cat_1930", "group": 2, "note": "İlk kadın belediye başkanı: Sadiye Hanım (Artvin-Yusufeli)." },
+                    { "id": "i_1930_2", "text": "Türkiye Cumhuriyet Merkez Bankası'nın Kurulması", "catId": "cat_1930", "group": 2, "note": "Milli para basma tekelini üstlenen bağımsız merkez bankası." },
+                    { "id": "i_1931_1", "text": "Türk Tarih Kurumu'nun (TTK) Kurulması", "catId": "cat_1931", "group": 2, "note": "Türk Tarih Tezi ve zengin milli tarihin araştırılması." },
+                    { "id": "i_1931_2", "text": "Ölçü ve Tartılarda Metrik Sisteme Geçilmesi (Metre, Kilo)", "catId": "cat_1931", "group": 2, "note": "Arşın, endaze ve okka yerine modern metrik ölçülere geçildi." },
+                    { "id": "i_1932_1", "text": "Türk Dil Kurumu'nun (TDK) Kurulması", "catId": "cat_1932", "group": 2, "note": "Türkçeyi yabancı kelimelerin boyunduruğundan kurtarma seferberliği." },
+                    { "id": "i_1932_2", "text": "Halkevleri'nin Açılması", "catId": "cat_1932", "group": 2, "note": "Cumhuriyet inkılaplarını halka anlatmak ve kültür eğitimi vermek için açıldı." },
+                    { "id": "i_1932_3", "text": "İcra ve İflas Kanunu (İsviçre'den)", "catId": "cat_1932", "group": 2, "note": "Ticari alacak ve borçların tahsilinde modern düzenleme." },
+                    { "id": "i_1933_1", "text": "Üniversite Reformu (Darülfünun yerine İstanbul Üniversitesi)", "catId": "cat_1933", "group": 2, "note": "İsviçreli Prof. Albert Malche raporuyla modern üniversite kuruldu." },
+                    { "id": "i_1933_2", "text": "Birinci 5 Yıllık Sanayi Planı'nın Hazırlanması", "catId": "cat_1933", "group": 2, "note": "Devletçilik ilkesi gereği pamuk, demir, şeker fabrikaları planlandı." },
+                    { "id": "i_1933_3", "text": "Sümerbank ve Halkbank'ın Kurulması", "catId": "cat_1933", "group": 2, "note": "Sanayi tesislerine kredi ve küçük esnafa finansman desteği." },
+                    { "id": "i_1933_4", "text": "Kadınlara Muhtar Seçilme Hakkı", "catId": "cat_1933", "group": 2, "note": "İlk kadın muhtar: Gül Esin (Aydın Çine Karpuzlu)." },
+                    { "id": "i_1934_1", "text": "Soyadı Kanunu'nun Kabulü", "catId": "cat_1934", "group": 2, "note": "Ayrıcalık bildiren unvan ve lakaplar yasaklandı, soyadı zorunlu oldu." },
+                    { "id": "i_1934_2", "text": "Kadınlara Milletvekili Seçme ve Seçilme Hakkı (05 Aralık)", "catId": "cat_1934", "group": 2, "note": "1935 seçimlerinde TBMM'ye 18 kadın milletvekili girdi." },
+                    { "id": "i_1934_3", "text": "Kılık Kıyafet Kanunu (Dini Giysilerin Dışarıda Giyilme Yasağı)", "catId": "cat_1934", "group": 2, "note": "Yalnızca en üst düzey dini liderler mabet dışında cübbe giyebilir dendi." },
+                    { "id": "i_1935_1", "text": "Etibank ve Maden Tetkik Arama Enstitüsü (MTA)", "catId": "cat_1935", "group": 2, "note": "Yeraltı zenginliklerini aramak ve madenciliği finanse etmek için kuruldu." },
+                    { "id": "i_1935_2", "text": "Hafta Tatilinin Cumadan Pazara Alınması", "catId": "cat_1935", "group": 2, "note": "Avrupa ve uluslararası ticaret piyasalarıyla çalışma günleri eşitlendi." },
+                    { "id": "i_1935_3", "text": "Türk Kuşu'nun Kurulması", "catId": "cat_1935", "group": 2, "note": "Sivil paraşütçü ve pilot yetiştirmek üzere Sabiha Gökçen ilk kadın pilot oldu." },
+                    { "id": "i_1936_1", "text": "Çubuk Barajı'nın Açılışı (Cumhuriyet'in İlk Barajı)", "catId": "cat_1936", "group": 2, "note": "Ankara'nın içme suyu ve taşkın kontrolü amacıyla inşa edildi." },
+                    { "id": "i_1937_1", "text": "Atatürk İlkelerinin 1924 Anayasası'na Eklenmesi", "catId": "cat_1937", "group": 2, "note": "Cumhuriyetçilik, Milliyetçilik, Halkçılık, Devletçilik, Laiklik, İnkılapçılık." },
+                    { "id": "i_1937_2", "text": "Denizbank'ın Kurulması", "catId": "cat_1937", "group": 2, "note": "Deniz taşımacılığı ve tersaneleri desteklemek üzere faaliyete geçti." },
+                    { "id": "i_1938_1", "text": "Toprak Mahsulleri Ofisi'nin (TMO) Kurulması", "catId": "cat_1938", "group": 2, "note": "Tahıl fiyatlarında taban fiyat politikası ve çiftçiyi koruma kurumu." }
+                ]
+            }
+        ];
+    </script>
+
+    <script id="app-engine">
+        const App = {
+            games: [],
+            currIdx: 0,
+            cats1: [], cats2: [], allCats: [],
+            items: [],
+            mode: 'draw',
+            selectedCardId: null,
+            activeDrawnItem: null,
+            stats: { corr: 0, wrong: 0, streak: 0, maxStreak: 0 },
+            weakOnly: false,
+            sound: true,
+            audioCtx: null,
+
+            init() {
+                if (window.navigator.standalone || window.matchMedia('(display-mode: standalone)').matches) {
+                    const banner = document.getElementById('ios-banner');
+                    if (banner) banner.classList.add('hidden');
+                } else {
+                    if (localStorage.getItem('ios_banner_dismissed')) {
+                        const banner = document.getElementById('ios-banner');
+                        if (banner) banner.classList.add('hidden');
+                    }
+                }
+
+                try {
+                    const saved = localStorage.getItem('kpss_tarih_data_v4');
+                    this.games = saved ? JSON.parse(saved) : JSON.parse(JSON.stringify(INITIAL_DATA));
+                } catch(e) {
+                    this.games = JSON.parse(JSON.stringify(INITIAL_DATA));
+                }
+                this.populateSelector();
+                this.loadGame(0);
+                this.initAudio();
+                this.initConfetti();
+            },
+
+            dismissIosBanner() {
+                const banner = document.getElementById('ios-banner');
+                if (banner) banner.classList.add('hidden');
+                localStorage.setItem('ios_banner_dismissed', '1');
+            },
+
+            toggleGridLayout(gridId, btn) {
+                const g = document.getElementById(gridId);
+                if (!g) return;
+                const isSingle = g.classList.toggle('single-col');
+                btn.textContent = isSingle ? "📱 Tekli" : "📱 2'li";
+                this.toast(isSingle ? "Tekli sütun görünümü" : "2'li kompakt görünüm");
+            },
+
+            saveStorage() {
+                try { localStorage.setItem('kpss_tarih_data_v4', JSON.stringify(this.games)); } catch(e) {}
+            },
+
+            restoreDefaults() {
+                if (confirm("Orijinal veritabanına sıfırlansın mı?")) {
+                    localStorage.removeItem('kpss_tarih_data_v4');
+                    this.games = JSON.parse(JSON.stringify(INITIAL_DATA));
+                    this.saveStorage();
+                    this.populateSelector();
+                    this.loadGame(0);
+                    this.closeModals();
+                    this.toast("Veritabanı sıfırlandı!");
+                }
+            },
+
+            initAudio() {
+                try {
+                    const AC = window.AudioContext || window.webkitAudioContext;
+                    if (AC) this.audioCtx = new AC();
+                } catch(e) { this.sound = false; }
+            },
+
+            playTone(freq, type, dur, delay=0) {
+                if (!this.sound || !this.audioCtx) return;
+                if (this.audioCtx.state === 'suspended') this.audioCtx.resume();
+                setTimeout(() => {
+                    try {
+                        const osc = this.audioCtx.createOscillator();
+                        const g = this.audioCtx.createGain();
+                        osc.type = type;
+                        osc.frequency.setValueAtTime(freq, this.audioCtx.currentTime);
+                        g.gain.setValueAtTime(0.08, this.audioCtx.currentTime);
+                        g.gain.exponentialRampToValueAtTime(0.001, this.audioCtx.currentTime + dur);
+                        osc.connect(g); g.connect(this.audioCtx.destination);
+                        osc.start(); osc.stop(this.audioCtx.currentTime + dur);
+                    } catch(e) {}
+                }, delay * 1000);
+            },
+
+            sndCorr() { this.playTone(523.25, 'sine', 0.1, 0); this.playTone(659.25, 'sine', 0.15, 0.07); },
+            sndWrong() { this.playTone(200, 'sawtooth', 0.22, 0); },
+            sndFanfare() { [523, 659, 784, 1046].forEach((f, i) => this.playTone(f, 'sine', 0.18, i * 0.08)); },
+
+            toggleSound() {
+                this.sound = !this.sound;
+                document.getElementById('btn-sound').textContent = this.sound ? '🔊' : '🔇';
+                this.toast(this.sound ? "Ses açık" : "Sessize alındı");
+            },
+
+            toggleTheme() {
+                const cur = document.documentElement.getAttribute('data-theme');
+                const next = cur === 'dark' ? 'light' : 'dark';
+                document.documentElement.setAttribute('data-theme', next);
+                document.getElementById('btn-theme').textContent = next === 'dark' ? '☀️' : '🌙';
+            },
+
+            populateSelector() {
+                const s = document.getElementById('sel-game');
+                s.innerHTML = '';
+                this.games.forEach((g, i) => {
+                    const o = document.createElement('option');
+                    o.value = i; o.textContent = g.title;
+                    if (i === this.currIdx) o.selected = true;
+                    s.appendChild(o);
+                });
+            },
+
+            switchGame(idx) { this.loadGame(parseInt(idx)); },
+
+            loadGame(idx) {
+                this.currIdx = idx;
+                const g = this.games[idx] || this.games[0];
+                document.getElementById('title-game').textContent = g.title;
+                document.getElementById('title-g1').textContent = g.g1Title || '1. Grup';
+                document.getElementById('title-g2').textContent = g.g2Title || '2. Grup';
+                document.getElementById('lbl-g1').textContent = g.g1Btn || '1. Grup';
+                document.getElementById('lbl-g2').textContent = g.g2Btn || '2. Grup';
+
+                this.cats1 = JSON.parse(JSON.stringify(g.cats1 || []));
+                this.cats2 = JSON.parse(JSON.stringify(g.cats2 || []));
+                this.allCats = [...this.cats1, ...this.cats2];
+                this.items = (g.items || []).map(i => ({
+                    id: i.id || 'i_' + Math.random().toString(36).substr(2, 9),
+                    text: i.text, catId: i.catId, group: i.group || 1,
+                    status: 'unplaced', hasFailed: false, note: i.note || '',
+                    wrongCount: i.wrongCount || 0, timesCorrect: i.timesCorrect || 0
+                }));
+
+                this.stats = { corr: 0, wrong: 0, streak: 0, maxStreak: 0 };
+                this.selectedCardId = null;
+                this.activeDrawnItem = null;
+
+                this.renderColumns(this.cats1, 'grid-g1');
+                this.renderColumns(this.cats2, 'grid-g2');
+                this.clearStage();
+                this.updateStats();
+                this.updateDrawBtns();
+
+                if (this.mode === 'all') this.renderAllPool();
+                if (this.mode === 'quiz') this.nextQuiz();
+                if (this.mode === 'fc') this.nextFC();
+            },
+
+            restartGame() {
+                this.items.forEach(i => { i.status = 'unplaced'; i.hasFailed = false; });
+                this.stats = { corr: 0, wrong: 0, streak: 0, maxStreak: 0 };
+                this.selectedCardId = null;
+                this.activeDrawnItem = null;
+                document.querySelectorAll('.sultan-col .reform-card').forEach(c => c.remove());
+                this.clearStage();
+                this.updateStats();
+                this.updateDrawBtns();
+                if (this.mode === 'all') this.renderAllPool();
+                if (this.mode === 'quiz') this.nextQuiz();
+                if (this.mode === 'fc') this.nextFC();
+                this.toast("Tur sıfırlandı!");
+            },
+
+            getPool() {
+                return this.items.filter(i => i.status !== 'placed' && (!this.weakOnly || (i.wrongCount && i.wrongCount > 0)));
+            },
+
+            updateStats() {
+                document.getElementById('st-corr').textContent = this.stats.corr;
+                document.getElementById('st-wrong').textContent = this.stats.wrong;
+                document.getElementById('st-streak').textContent = this.stats.streak;
+                const weakCnt = this.items.filter(i => i.wrongCount > 0).length;
+                document.getElementById('st-weak').textContent = weakCnt;
+            },
+
+            updateDrawBtns() {
+                const p = this.getPool();
+                const c1 = p.filter(i => i.group === 1).length;
+                const c2 = p.filter(i => i.group === 2).length;
+                const smartCnt = p.filter(i => i.wrongCount > 0).length;
+
+                document.getElementById('cnt-g1').textContent = c1;
+                document.getElementById('cnt-g2').textContent = c2;
+                document.getElementById('cnt-mix').textContent = c1 + c2;
+                document.getElementById('cnt-smart').textContent = smartCnt;
+
+                document.getElementById('b-draw-g1').disabled = (c1 === 0);
+                document.getElementById('b-draw-g2').disabled = (c2 === 0);
+                document.getElementById('b-draw-mix').disabled = (c1 + c2 === 0);
+                document.getElementById('b-draw-smart').disabled = (smartCnt === 0);
+            },
+
+            toggleWeak() {
+                this.setWeak(!this.weakOnly);
+                this.restartGame();
+            },
+
+            setWeak(val) {
+                this.weakOnly = val;
+                document.getElementById('btn-weak').classList.toggle('active', this.weakOnly);
+                this.toast(this.weakOnly ? "Sadece zayıf noktalar aktif!" : "Tüm havuz devrede");
+            },
+
+            clearStage() {
+                const s = document.getElementById('draw-stage');
+                s.className = 'active-stage';
+                s.innerHTML = '<span style="color:var(--text-muted); font-size:0.8rem;">🎲 Kura çekmek için butona dokunun</span>';
+                document.getElementById('touch-hint').style.display = 'none';
+            },
+
+            draw(type) {
+                if (this.activeDrawnItem) {
+                    this.toast("Önce eldeki kartı bir sütuna yerleştirin!", "warn");
+                    return;
+                }
+                let pool = this.getPool();
+                if (type === 'g1') pool = pool.filter(i => i.group === 1);
+                if (type === 'g2') pool = pool.filter(i => i.group === 2);
+                if (type === 'smart') {
+                    const w = [];
+                    pool.forEach(i => {
+                        const mult = Math.max(1, (i.wrongCount || 0) * 3);
+                        for (let k = 0; k < mult; k++) w.push(i);
+                    });
+                    if (w.length > 0) pool = w;
+                }
+                if (pool.length === 0) {
+                    this.toast("Bu havuzda yerleştirilecek madde kalmadı! 🎉");
+                    return;
+                }
+                const picked = pool[Math.floor(Math.random() * pool.length)];
+                this.activeDrawnItem = picked;
+                this.selectedCardId = picked.id;
+
+                const stage = document.getElementById('draw-stage');
+                stage.className = 'active-stage active';
+                stage.innerHTML = '';
+                const card = this.createCardEl(picked);
+                card.classList.add('selected');
+                stage.appendChild(card);
+
+                this.highlightCols(true);
+                document.getElementById('touch-hint').style.display = 'block';
+                this.updateDrawBtns();
+            },
+
+            createCardEl(item) {
+                const el = document.createElement('div');
+                el.className = 'reform-card';
+                el.dataset.id = item.id;
+                el.setAttribute('draggable', 'true');
+                el.innerHTML = `
+                    <div class="card-top">
+                        <span>${item.text}</span>
+                        ${item.note ? '<button class="btn-cue" title="İpucu" onclick="event.stopPropagation(); this.closest(\'.reform-card\').querySelector(\'.card-note\').classList.toggle(\'open\');">💡</button>' : ''}
+                    </div>
+                    ${item.note ? `<div class="card-note">💡 ${item.note}</div>` : ''}
+                `;
+                el.addEventListener('dragstart', (e) => {
+                    e.dataTransfer.setData('text/plain', item.id);
+                    App.selectedCardId = item.id;
+                    App.highlightCols(true);
+                });
+                el.addEventListener('dragend', () => App.highlightCols(false));
+                
+                el.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    App.selectedCardId = item.id;
+                    document.querySelectorAll('.reform-card').forEach(c => c.classList.remove('selected'));
+                    el.classList.add('selected');
+                    App.highlightCols(true);
+                    document.getElementById('touch-hint').style.display = 'block';
+                });
+                return el;
+            },
+
+            renderColumns(cats, containerId) {
+                const c = document.getElementById(containerId);
+                c.innerHTML = '';
+                cats.forEach(cat => {
+                    const col = document.createElement('div');
+                    col.className = 'sultan-col';
+                    col.dataset.catId = cat.id;
+                    col.innerHTML = `
+                        <div class="col-header">
+                            <span class="col-name">${cat.name}</span>
+                            <span class="col-years">${cat.years ? '('+cat.years+')' : ''}</span>
+                        </div>
+                        <div class="tap-target-btn">Buraya Yerleştir ➔</div>
+                    `;
+                    col.addEventListener('dragover', e => e.preventDefault());
+                    col.addEventListener('drop', e => {
+                        e.preventDefault();
+                        const id = e.dataTransfer.getData('text/plain') || App.selectedCardId;
+                        if (id) { App.selectedCardId = id; App.place(cat.id); }
+                    });
+                    col.addEventListener('click', () => {
+                        if (App.selectedCardId) App.place(cat.id);
+                    });
+                    c.appendChild(col);
+                });
+            },
+
+            highlightCols(on) {
+                document.querySelectorAll('.sultan-col').forEach(c => c.classList.toggle('target-ready', on));
+            },
+
+            place(targetCatId) {
+                const item = this.items.find(i => i.id === this.selectedCardId);
+                if (!item) return;
+
+                const col = document.querySelector(`.sultan-col[data-cat-id="${targetCatId}"]`);
+                const isCorrect = (item.catId === targetCatId);
+
+                if (isCorrect) {
+                    this.sndCorr();
+                    item.status = 'placed';
+                    item.timesCorrect = (item.timesCorrect || 0) + 1;
+                    this.stats.corr++;
+                    this.stats.streak++;
+                    if (this.stats.streak > this.stats.maxStreak) this.stats.maxStreak = this.stats.streak;
+                    if (this.stats.streak % 5 === 0) {
+                        this.launchConfetti();
+                        this.toast(`🔥 Harika! ${this.stats.streak}x Seri Kombo!`);
+                    }
+                    this.syncStorage(item);
+
+                    const placedEl = document.createElement('div');
+                    placedEl.className = 'reform-card ' + (item.hasFailed ? 'recovered' : 'correct');
+                    placedEl.innerHTML = `<div class="card-top"><span>${item.text}</span></div>${item.note ? '<div class="card-note open">📝 ' + item.note + '</div>' : ''}`;
+                    col.appendChild(placedEl);
+
+                    if (this.activeDrawnItem && this.activeDrawnItem.id === item.id) {
+                        this.activeDrawnItem = null;
+                        this.clearStage();
+                    }
+                    if (this.mode === 'all') {
+                        const pEl = document.querySelector(`.all-pool-grid .reform-card[data-id="${item.id}"]`);
+                        if (pEl) pEl.remove();
+                    }
+
+                    this.selectedCardId = null;
+                    this.highlightCols(false);
+                    this.updateStats();
+                    this.updateDrawBtns();
+                    this.checkDone();
+                } else {
+                    this.sndWrong();
+                    item.hasFailed = true;
+                    item.wrongCount = (item.wrongCount || 0) + 1;
+                    this.stats.wrong++;
+                    this.stats.streak = 0;
+                    this.syncStorage(item);
+
+                    if (col) {
+                        col.classList.add('wrong');
+                        setTimeout(() => col.classList.remove('wrong'), 450);
+                    }
+                    const cardEl = document.querySelector(`.reform-card[data-id="${item.id}"]`);
+                    if (cardEl) {
+                        cardEl.classList.add('wrong');
+                        setTimeout(() => cardEl.classList.remove('wrong'), 450);
+                        const n = cardEl.querySelector('.card-note');
+                        if (n) n.classList.add('open');
+                    }
+                    this.updateStats();
+                    this.toast("Yanlış eşleştirme! İpucuna dikkat et.", "error");
+                }
+            },
+
+            syncStorage(item) {
+                const g = this.games[this.currIdx];
+                if (!g || !g.items) return;
+                const idx = g.items.findIndex(x => x.id === item.id);
+                if (idx > -1) {
+                    g.items[idx].wrongCount = item.wrongCount;
+                    g.items[idx].timesCorrect = item.timesCorrect;
+                }
+                this.saveStorage();
+            },
+
+            checkDone() {
+                if (this.getPool().length === 0) {
+                    this.sndFanfare();
+                    this.launchConfetti();
+                    setTimeout(() => this.showCompletion(), 500);
+                }
+            },
+
+            showCompletion() {
+                const tot = this.stats.corr + this.stats.wrong;
+                const pct = tot > 0 ? Math.round((this.stats.corr / tot) * 100) : 100;
+                document.getElementById('comp-summary').innerHTML = `
+                    Bu turda <strong>${this.stats.corr} doğru</strong>, <strong>${this.stats.wrong} yanlış</strong> yaptın.<br>
+                    Başarı Oranı: <strong>%${pct}</strong> | Maksimum Seri: <strong>${this.stats.maxStreak}</strong>
+                `;
+                const wl = document.getElementById('comp-weak');
+                wl.innerHTML = '';
+                const weaks = this.items.filter(i => i.wrongCount > 0).sort((a,b) => b.wrongCount - a.wrongCount);
+                if (weaks.length === 0) {
+                    wl.innerHTML = '<span style="color:var(--success); font-weight:700;">🎯 Sıfır hata ile tamamladın!</span>';
+                } else {
+                    weaks.forEach(w => {
+                        const r = document.createElement('div');
+                        r.style.cssText = 'display:flex; justify-content:space-between; border-bottom:1px solid var(--border); padding:3px 0;';
+                        r.innerHTML = `<span>${w.text}</span><strong style="color:var(--danger);">${w.wrongCount}x Hata</strong>`;
+                        wl.appendChild(r);
+                    });
+                }
+                this.openModal('modal-completion');
+            },
+
+            switchMode(m) {
+                this.mode = m;
+                document.querySelectorAll('.tab-btn[data-m]').forEach(b => b.classList.toggle('active', b.dataset.m === m));
+                document.getElementById('sec-draw').style.display = (m === 'draw') ? 'flex' : 'none';
+                document.getElementById('sec-all').style.display = (m === 'all') ? 'block' : 'none';
+                document.getElementById('sec-quiz').style.display = (m === 'quiz') ? 'flex' : 'none';
+                document.getElementById('sec-fc').style.display = (m === 'fc') ? 'flex' : 'none';
+                document.getElementById('groups-container').style.display = (m === 'draw' || m === 'all') ? 'block' : 'none';
+
+                if (m === 'all') this.renderAllPool();
+                if (m === 'quiz') this.nextQuiz();
+                if (m === 'fc') this.nextFC();
+            },
+
+            renderAllPool() {
+                const g = document.getElementById('all-grid');
+                g.innerHTML = '';
+                const pool = this.getPool().sort(() => Math.random() - 0.5);
+                if (pool.length === 0) {
+                    g.innerHTML = '<span style="color:var(--text-muted); font-size:0.8rem;">Tüm maddeler yerleştirildi! 🎉</span>';
+                    return;
+                }
+                pool.forEach(item => g.appendChild(this.createCardEl(item)));
+            },
+
+            quizItem: null,
+            quizAnswered: false,
+            nextQuiz() {
+                this.quizAnswered = false;
+                const pool = this.getPool();
+                const qEl = document.getElementById('quiz-q');
+                const optsEl = document.getElementById('quiz-opts');
+                const fb = document.getElementById('quiz-fb');
+                const btnNext = document.getElementById('btn-next-q');
+
+                fb.style.display = 'none';
+                btnNext.style.display = 'none';
+                optsEl.innerHTML = '';
+
+                if (pool.length === 0) {
+                    qEl.textContent = '🎉 Bu havuzdaki tüm sorular bitti!';
+                    document.getElementById('quiz-fill').style.width = '100%';
+                    return;
+                }
+
+                this.quizItem = pool[Math.floor(Math.random() * pool.length)];
+                qEl.textContent = this.quizItem.text;
+
+                const tot = this.items.filter(i => !this.weakOnly || i.wrongCount > 0).length;
+                const pct = tot > 0 ? ((tot - pool.length) / tot) * 100 : 0;
+                document.getElementById('quiz-fill').style.width = pct + '%';
+                document.getElementById('quiz-info').textContent = `Kalan Soru: ${pool.length} ${this.weakOnly ? '(Zayıf Noktalar)' : ''}`;
+
+                const grpCats = this.quizItem.group === 1 ? this.cats1 : this.cats2;
+                const trueCat = this.allCats.find(c => c.id === this.quizItem.catId);
+                const distractors = grpCats.filter(c => c.id !== this.quizItem.catId).sort(() => Math.random() - 0.5).slice(0, 3);
+                const finalOpts = [trueCat, ...distractors].filter(Boolean).sort(() => Math.random() - 0.5);
+
+                finalOpts.forEach(cat => {
+                    const b = document.createElement('button');
+                    b.className = 'btn-opt';
+                    b.textContent = `${cat.name} ${cat.years ? '('+cat.years+')' : ''}`;
+                    b.onclick = () => this.answerQuiz(cat.id, b);
+                    optsEl.appendChild(b);
+                });
+            },
+
+            answerQuiz(catId, btnEl) {
+                if (this.quizAnswered) return;
+                this.quizAnswered = true;
+                const isCorr = (catId === this.quizItem.catId);
+                const fb = document.getElementById('quiz-fb');
+                document.querySelectorAll('.btn-opt').forEach(b => b.disabled = true);
+
+                if (isCorr) {
+                    this.sndCorr();
+                    btnEl.classList.add('correct');
+                    this.quizItem.status = 'placed';
+                    this.quizItem.timesCorrect = (this.quizItem.timesCorrect || 0) + 1;
+                    this.stats.corr++; this.stats.streak++;
+                    fb.style.display = 'block';
+                    fb.style.background = 'rgba(16,185,129,0.12)';
+                    fb.innerHTML = `<strong>Tebrikler! Doğru cevap.</strong>${this.quizItem.note ? '<br>📝 <em>Not: ' + this.quizItem.note + '</em>' : ''}`;
+                } else {
+                    this.sndWrong();
+                    btnEl.classList.add('wrong');
+                    this.quizItem.wrongCount = (this.quizItem.wrongCount || 0) + 1;
+                    this.stats.wrong++; this.stats.streak = 0;
+                    const trueCat = this.allCats.find(c => c.id === this.quizItem.catId);
+                    document.querySelectorAll('.btn-opt').forEach(b => {
+                        if (trueCat && b.textContent.includes(trueCat.name)) b.classList.add('correct');
+                    });
+                    fb.style.display = 'block';
+                    fb.style.background = 'rgba(239,68,68,0.12)';
+                    fb.innerHTML = `<strong>Doğru Cevap: ${trueCat ? trueCat.name : ''}</strong>${this.quizItem.note ? '<br>💡 <em>İpucu: ' + this.quizItem.note + '</em>' : ''}`;
+                }
+                this.syncStorage(this.quizItem);
+                this.updateStats();
+                document.getElementById('btn-next-q').style.display = 'inline-block';
+            },
+
+            fcItem: null,
+            nextFC() {
+                const inner = document.getElementById('fc-inner');
+                inner.classList.remove('flipped');
+                const pool = this.getPool();
+                if (pool.length === 0) {
+                    document.getElementById('fc-q').textContent = '🎉 Tüm bilgi kartları bitti!';
+                    document.getElementById('fc-a').textContent = 'Tebrikler!';
+                    document.getElementById('fc-n').textContent = '';
+                    return;
+                }
+                this.fcItem = pool[Math.floor(Math.random() * pool.length)];
+                document.getElementById('fc-q').textContent = this.fcItem.text;
+                const cat = this.allCats.find(c => c.id === this.fcItem.catId);
+                document.getElementById('fc-a').textContent = cat ? `${cat.name} ${cat.years ? '('+cat.years+')' : ''}` : '—';
+                document.getElementById('fc-n').textContent = this.fcItem.note ? '💡 ' + this.fcItem.note : '';
+            },
+
+            flipFC() {
+                document.getElementById('fc-inner').classList.toggle('flipped');
+            },
+
+            rateFC(knew) {
+                if (!this.fcItem) return;
+                if (knew) {
+                    this.sndCorr();
+                    this.fcItem.status = 'placed';
+                    this.fcItem.timesCorrect = (this.fcItem.timesCorrect || 0) + 1;
+                    this.stats.corr++; this.stats.streak++;
+                } else {
+                    this.sndWrong();
+                    this.fcItem.wrongCount = (this.fcItem.wrongCount || 0) + 1;
+                    this.stats.wrong++; this.stats.streak = 0;
+                }
+                this.syncStorage(this.fcItem);
+                this.updateStats();
+                this.nextFC();
+            },
+
+            openModal(id) { document.getElementById(id).classList.add('show'); },
+            closeModals() { document.querySelectorAll('.modal-overlay').forEach(m => m.classList.remove('show')); },
+
+            openCreator() {
+                this.clearCreator();
+                this.addCreatorCat('', '1. Sütun', '', '1');
+                this.addCreatorCat('', '2. Sütun', '', '2');
+                this.openModal('modal-creator');
+            },
+
+            clearCreator() {
+                document.getElementById('c-title').value = '';
+                document.getElementById('c-g1-t').value = '';
+                document.getElementById('c-g1-b').value = '';
+                document.getElementById('c-g2-t').value = '';
+                document.getElementById('c-g2-b').value = '';
+                document.getElementById('c-cat-list').innerHTML = '';
+                document.getElementById('c-item-list').innerHTML = '';
+                document.getElementById('c-bulk').value = '';
+            },
+
+            addCreatorCat(id='', name='', years='', grp='1') {
+                const list = document.getElementById('c-cat-list');
+                const row = document.createElement('div');
+                row.className = 'edit-row cat-row';
+                row.innerHTML = `
+                    <input type="hidden" class="c-cat-id" value="${id || 'cat_' + Math.random().toString(36).substr(2, 7)}">
+                    <input type="text" class="form-input c-cat-name" placeholder="Sütun Adı" value="${name}" style="flex:1;">
+                    <input type="text" class="form-input c-cat-years" placeholder="Tarih" value="${years}" style="flex:1;">
+                    <select class="form-select c-cat-grp" style="width:auto;">
+                        <option value="1" ${grp==='1'?'selected':''}>1. Grup</option>
+                        <option value="2" ${grp==='2'?'selected':''}>2. Grup</option>
+                    </select>
+                    <button class="btn-text-sm" onclick="this.parentElement.remove()">Sil</button>
+                `;
+                list.appendChild(row);
+            },
+
+            addCreatorItem(text='', catId='', note='') {
+                const list = document.getElementById('c-item-list');
+                const row = document.createElement('div');
+                row.className = 'edit-row item-row';
+                const cats = [];
+                document.querySelectorAll('.cat-row').forEach(r => {
+                    cats.push({ id: r.querySelector('.c-cat-id').value, name: r.querySelector('.c-cat-name').value || 'Sütun' });
+                });
+                const opts = cats.map(c => `<option value="${c.id}" ${c.id===catId?'selected':''}>${c.name}</option>`).join('');
+                row.innerHTML = `
+                    <input type="text" class="form-input c-item-text" placeholder="Madde" value="${text}" style="flex:2;">
+                    <select class="form-select c-item-cat">${opts}</select>
+                    <input type="text" class="form-input c-item-note" placeholder="İpucu" value="${note}" style="flex:1;">
+                    <button class="btn-text-sm" onclick="this.parentElement.remove()">Sil</button>
+                `;
+                list.appendChild(row);
+            },
+
+            importBulkCreator() {
+                const t = document.getElementById('c-bulk').value.trim();
+                if (!t) return;
+                const cats = [];
+                document.querySelectorAll('.cat-row').forEach(r => {
+                    cats.push({ id: r.querySelector('.c-cat-id').value, name: r.querySelector('.c-cat-name').value.trim() });
+                });
+                let cnt = 0;
+                t.split('\n').forEach(line => {
+                    const p = line.split('|').map(s => s.trim());
+                    if (p[0]) {
+                        const m = cats.find(c => c.name.toLowerCase() === (p||'').toLowerCase());
+                        this.addCreatorItem(p[0], m ? m.id : (cats[0]?cats[0].id:''), p[2]||'');
+                        cnt++;
+                    }
+                });
+                document.getElementById('c-bulk').value = '';
+                this.toast(`${cnt} madde eklendi!`);
+            },
+
+            saveNewGame() {
+                const title = document.getElementById('c-title').value.trim();
+                if (!title) { this.toast("Lütfen oyun adını yazın!", "warn"); return; }
+                const cats1 = [], cats2 = [];
+                document.querySelectorAll('.cat-row').forEach(r => {
+                    const id = r.querySelector('.c-cat-id').value;
+                    const name = r.querySelector('.c-cat-name').value.trim() || 'Sütun';
+                    const years = r.querySelector('.c-cat-years').value.trim();
+                    const grp = r.querySelector('.c-cat-grp').value;
+                    const o = { id, name, years };
+                    if (grp === '1') cats1.push(o); else cats2.push(o);
+                });
+                const items = [];
+                document.querySelectorAll('.item-row').forEach(r => {
+                    const text = r.querySelector('.c-item-text').value.trim();
+                    const catId = r.querySelector('.c-item-cat').value;
+                    const note = r.querySelector('.c-item-note').value.trim();
+                    if (text && catId) {
+                        const isG1 = cats1.some(c => c.id === catId);
+                        items.push({ id: 'i_' + Math.random().toString(36).substr(2,9), text, catId, group: isG1 ? 1 : 2, note, wrongCount: 0, timesCorrect: 0 });
+                    }
+                });
+
+                const newG = {
+                    id: 'g_' + Date.now(),
+                    title,
+                    g1Title: document.getElementById('c-g1-t').value.trim() || '1. Grup',
+                    g2Title: document.getElementById('c-g2-t').value.trim() || '2. Grup',
+                    g1Btn: document.getElementById('c-g1-b').value.trim() || '1. Grup',
+                    g2Btn: document.getElementById('c-g2-b').value.trim() || '2. Grup',
+                    cats1, cats2, items
+                };
+                this.games.push(newG);
+                this.saveStorage();
+                this.populateSelector();
+                this.loadGame(this.games.length - 1);
+                this.closeModals();
+                this.toast("Yeni oyun oluşturuldu!");
+            },
+
+            openEditor() {
+                const c = document.getElementById('editor-items');
+                c.innerHTML = '';
+                this.items.forEach(item => c.appendChild(this.createEditorRow(item)));
+                this.openModal('modal-editor');
+            },
+
+            createEditorRow(item) {
+                const r = document.createElement('div');
+                r.className = 'edit-row ed-item-row';
+                r.dataset.id = item.id;
+                const opts = this.allCats.map(c => `<option value="${c.id}" ${c.id===item.catId?'selected':''}>${c.name}</option>`).join('');
+                r.innerHTML = `
+                    <input type="text" class="form-input ed-text" value="${item.text}" style="flex:2;">
+                    <select class="form-select ed-cat">${opts}</select>
+                    <input type="text" class="form-input ed-note" placeholder="İpucu" value="${item.note||''}" style="flex:1;">
+                    <button class="btn-text-sm" onclick="this.parentElement.remove()">Sil</button>
+                `;
+                return r;
+            },
+
+            addEditorItem() {
+                const defCat = this.allCats[0] ? this.allCats[0].id : '';
+                const c = document.getElementById('editor-items');
+                const r = this.createEditorRow({ id: 'i_' + Date.now(), text: '', catId: defCat, note: '' });
+                c.appendChild(r);
+                r.scrollIntoView({ behavior: 'smooth' });
+            },
+
+            saveEditor() {
+                const updated = [];
+                document.querySelectorAll('.ed-item-row').forEach(r => {
+                    const id = r.dataset.id;
+                    const text = r.querySelector('.ed-text').value.trim();
+                    const catId = r.querySelector('.ed-cat').value;
+                    const note = r.querySelector('.ed-note').value.trim();
+                    if (text && catId) {
+                        const isG1 = this.cats1.some(c => c.id === catId);
+                        const old = this.items.find(i => i.id === id);
+                        updated.push({
+                            id, text, catId, group: isG1 ? 1 : 2, note, status: 'unplaced',
+                            wrongCount: old ? old.wrongCount : 0, timesCorrect: old ? old.timesCorrect : 0
+                        });
+                    }
+                });
+                this.games[this.currIdx].items = updated;
+                this.saveStorage();
+                this.loadGame(this.currIdx);
+                this.closeModals();
+                this.toast("Maddeler kaydedildi!");
+            },
+
+            openExport() {
+                const code = this.getCleanHTML();
+                document.getElementById('exp-text').value = code;
+                this.openModal('modal-export');
+            },
+
+            getCleanHTML() {
+                const clone = document.documentElement.cloneNode(true);
+                clone.querySelectorAll('.modal-overlay').forEach(m => m.classList.remove('show'));
+                clone.querySelectorAll('textarea').forEach(t => t.innerHTML = '');
+                const seedScript = clone.querySelector('#game-seed');
+                if (seedScript) {
+                    const cleanJSON = JSON.stringify(this.games).split('<').join('\\x3C');
+                    seedScript.textContent = `\n        const INITIAL_DATA = ${cleanJSON};\n    `;
+                }
+                return "<!DOCTYPE html>\n<html lang=\"tr\" data-theme=\"" + (document.documentElement.getAttribute('data-theme')||'light') + "\">\n" + clone.innerHTML + "\n</html>";
+            },
+
+            downloadHTML() {
+                const blob = new Blob([this.getCleanHTML()], { type: 'text/html;charset=utf-8' });
+                const u = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = u; a.download = 'TarihOyunlari_Kutuphanesi.html';
+                a.click(); URL.revokeObjectURL(u);
+                this.toast("HTML dosyası indirildi!");
+            },
+
+            downloadJSON() {
+                const blob = new Blob([JSON.stringify(this.games, null, 2)], { type: 'application/json' });
+                const u = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = u; a.download = 'TarihOyunlari_Yedek.json';
+                a.click(); URL.revokeObjectURL(u);
+                this.toast("JSON veritabanı indirildi!");
+            },
+
+            importJSON(e) {
+                const file = e.target.files[0];
+                if (!file) return;
+                const r = new FileReader();
+                r.onload = ev => {
+                    try {
+                        const d = JSON.parse(ev.target.result);
+                        if (Array.isArray(d)) {
+                            this.games = d;
+                            this.saveStorage();
+                            this.populateSelector();
+                            this.loadGame(0);
+                            this.closeModals();
+                            this.toast("Yedek yüklendi! 🎉");
+                        }
+                    } catch(err) { alert("Geçersiz JSON dosyası!"); }
+                };
+                r.readAsText(file);
+            },
+
+            copyCode() {
+                const ta = document.getElementById('exp-text');
+                ta.select(); document.execCommand('copy');
+                this.toast("Kod panoya kopyalandı!");
+            },
+
+            toast(msg) {
+                const w = document.getElementById('toasts');
+                const t = document.createElement('div');
+                t.className = 'toast-item';
+                t.textContent = msg;
+                w.appendChild(t);
+                setTimeout(() => {
+                    t.style.opacity = '0';
+                    t.style.transition = '0.3s';
+                    setTimeout(() => t.remove(), 300);
+                }, 2500);
+            },
+
+            canvas: null, ctx: null, particles: [],
+            initConfetti() {
+                this.canvas = document.getElementById('confetti-canvas');
+                if (!this.canvas) return;
+                this.ctx = this.canvas.getContext('2d');
+                const res = () => { this.canvas.width = window.innerWidth; this.canvas.height = window.innerHeight; };
+                res(); window.addEventListener('resize', res);
+            },
+
+            launchConfetti() {
+                if (!this.ctx) return;
+                this.particles = [];
+                const colors = ['#4f46e5', '#10b981', '#f59e0b', '#ec4899', '#3b82f6'];
+                for (let i = 0; i < 70; i++) {
+                    this.particles.push({
+                        x: window.innerWidth / 2 + (Math.random() - 0.5) * 160,
+                        y: window.innerHeight * 0.4,
+                        vx: (Math.random() - 0.5) * 12,
+                        vy: -Math.random() * 10 - 3,
+                        size: Math.random() * 7 + 4,
+                        color: colors[Math.floor(Math.random() * colors.length)],
+                        rot: Math.random() * 360,
+                        vRot: (Math.random() - 0.5) * 8,
+                        op: 1
+                    });
+                }
+                this.renderConfetti();
+            },
+
+            renderConfetti() {
+                if (!this.ctx) return;
+                this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+                let alive = false;
+                this.particles.forEach(p => {
+                    p.x += p.vx; p.y += p.vy; p.vy += 0.3;
+                    p.rot += p.vRot; p.op -= 0.015;
+                    if (p.op > 0 && p.y < this.canvas.height) {
+                        alive = true;
+                        this.ctx.save();
+                        this.ctx.globalAlpha = p.op;
+                        this.ctx.translate(p.x, p.y);
+                        this.ctx.rotate((p.rot * Math.PI) / 180);
+                        this.ctx.fillStyle = p.color;
+                        this.ctx.fillRect(-p.size/2, -p.size/2, p.size, p.size);
+                        this.ctx.restore();
+                    }
+                });
+                if (alive) requestAnimationFrame(() => this.renderConfetti());
+                else this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+            }
+        };
+
+        window.addEventListener('DOMContentLoaded', () => App.init());
+    </script>
+</body>
+</html>
