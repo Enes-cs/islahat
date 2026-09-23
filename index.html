@@ -2,6 +2,7 @@
 <html lang="tr" data-theme="light">
 <head>
     <meta charset="UTF-8">
+    <!-- iPhone SE3 & iOS Safari Standalone / PWA Meta Tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
@@ -10,6 +11,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="theme-color" content="#4f46e5">
 
+    <!-- Apple Touch Icon (180x180 Retina Display PNG) -->
     <link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAABo/88pAAAB90lEQVR4nO3WsQ3DMAwEQcuY111y06Z41bCGBBggE/HfgKvh/R8AuMvV7wA0VfRkFU9W8WQV73r6vW37u57e84qnrKJnq3iyjZ6t4skyeraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyzTfv+71uR8t7XvGUVfRsFU+20bNVPFnFk1U8WcW73/4B68K3i8831w0AAAAASUVORK5CYII=">
     <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAABo/88pAAAB90lEQVR4nO3WsQ3DMAwEQcuY111y06Z41bCGBBggE/HfgKvh/R8AuMvV7wA0VfRkFU9W8WQV73r6vW37u57e84qnrKJnq3iyjZ6t4skyeraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyjZ6t4sk2eraKJ9vo2SqebKNnq3iyzTfv+71uR8t7XvGUVfRsFU+20bNVPFnFk1U8WcW73/4B68K3i8831w0AAAAASUVORK5CYII=">
 
@@ -90,7 +92,7 @@
 
         body {
             padding-top: var(--sat);
-            padding-bottom: calc(105px + var(--sab));
+            padding-bottom: calc(105px + var(--sab)); /* Alttaki HUD için güvenli boşluk */
         }
 
         .ios-install-banner {
@@ -119,6 +121,7 @@
             flex-shrink: 0;
         }
 
+        /* Ultra-Kompakt Navbar */
         .navbar {
             position: sticky;
             top: 0;
@@ -282,6 +285,7 @@
             padding: 6px 8px 10px;
         }
 
+        /* Grup Filtreleme Çubuğu (Tek Ekrana Sığdırma Çözümü) */
         .group-filter-bar {
             display: flex;
             gap: 4px;
@@ -308,6 +312,7 @@
             color: #fff;
         }
 
+        /* Sütun Izgarası */
         .sultan-grid {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -430,6 +435,7 @@
         }
         .card-note.open { display: block; }
 
+        /* YÜZER ALT PANEL (DOCK HUD) - SIFIR KAYDIRMA REVRİMİ */
         .bottom-dock-hud {
             position: fixed;
             bottom: 0;
@@ -447,6 +453,7 @@
             gap: 4px;
         }
 
+        /* 1) Kura Çekim Butonları Paneli */
         .dock-draw-row {
             display: grid;
             grid-template-columns: 1fr 1fr 1.1fr 1fr;
@@ -500,6 +507,7 @@
         }
         .toggle-auto input { accent-color: var(--primary); }
 
+        /* 2) Kart Çekildiğinde Açılan Aktif Kart Dock'u */
         .dock-card-active {
             display: none;
             background: var(--card-bg);
@@ -566,6 +574,7 @@
             border-top: 1px solid rgba(255, 255, 255, 0.15);
         }
 
+        /* Hızlı Padişah Seçici Açılır Penceresi (Sıfır Kaydırma) */
         .quick-picker-overlay {
             display: none;
             position: fixed;
@@ -612,6 +621,7 @@
         }
         .btn-pick-cat:active { background: var(--primary-light); border-color: var(--primary); }
 
+        /* Quiz ve Flashcard Bölümleri */
         .quiz-box, .fc-box, .all-pool-box {
             display: none;
             width: 100%;
@@ -691,6 +701,7 @@
             background: linear-gradient(135deg, var(--surface), var(--surface-subtle));
         }
 
+        /* Modallar */
         .modal-overlay {
             display: none;
             position: fixed;
@@ -810,6 +821,7 @@
         <button class="btn-banner-close" onclick="App.dismissIosBanner()">✕</button>
     </div>
 
+    <!-- Ultra-Kompakt Navbar -->
     <header class="navbar">
         <div class="nav-inner">
             <div class="nav-row-main">
@@ -844,16 +856,19 @@
     </header>
 
     <main class="container">
+        <!-- Grup Filtreleyici (iPhone SE3 Ekranına Tam Sığdırma Çözümü) -->
         <div class="group-filter-bar" id="group-filter-bar">
             <button class="grp-filter-btn active" data-grp="all" onclick="App.filterGroup('all')">🌟 Tümü</button>
             <button class="grp-filter-btn" data-grp="1" id="btn-grp1" onclick="App.filterGroup('1')">1. Grup</button>
             <button class="grp-filter-btn" data-grp="2" id="btn-grp2" onclick="App.filterGroup('2')">2. Grup</button>
         </div>
 
+        <!-- Havuz Listesi (Tümü Modu için) -->
         <section id="sec-all" class="all-pool-box">
             <div id="all-grid" style="display:flex; flex-wrap:wrap; gap:4px; justify-content:center;"></div>
         </section>
 
+        <!-- Test Modu -->
         <section id="sec-quiz" class="quiz-box">
             <div class="quiz-card">
                 <div style="font-size:0.68rem; color:var(--text-muted); margin-bottom:2px;" id="quiz-info">KPSS Test Modu</div>
@@ -864,6 +879,7 @@
             </div>
         </section>
 
+        <!-- Bilgi Kartı Modu -->
         <section id="sec-fc" class="fc-box">
             <div class="fc-wrapper" onclick="App.flipFC()">
                 <div class="fc-inner" id="fc-inner">
@@ -885,6 +901,7 @@
             </div>
         </section>
 
+        <!-- Dinamik Sütunlar -->
         <div id="groups-container">
             <div id="wrap-g1">
                 <div class="sultan-grid" id="grid-g1"></div>
@@ -895,7 +912,9 @@
         </div>
     </main>
 
+    <!-- YÜZER ALT PANEL (DOCK HUD) - SIFIR KAYDIRMA KUMANDASI -->
     <div class="bottom-dock-hud" id="bottom-dock">
+        <!-- 1) Normal Kura Çekim Menüsü -->
         <div class="dock-draw-row" id="dock-draw-buttons">
             <button class="btn-dock-draw g1" id="b-draw-g1" onclick="App.draw('g1')">
                 <span id="lbl-g1">1. Grup</span> <span class="b-cnt-pill" id="cnt-g1">0</span>
@@ -919,6 +938,7 @@
             <span id="lbl-remaining-info">Kalan: 0</span>
         </div>
 
+        <!-- 2) Çekilmiş Aktif Kart Paneli (Sayfanın her yerinde elinizin altında!) -->
         <div class="dock-card-active" id="dock-card-active">
             <div class="dock-card-header">
                 <div class="dock-card-text" id="dock-card-title">—</div>
@@ -936,6 +956,7 @@
         </div>
     </div>
 
+    <!-- Hızlı Padişah Seçim Çekmecesi (Sıfır Kaydırma ile Yerleştir) -->
     <div class="quick-picker-overlay" id="quick-picker" onclick="App.closeQuickPicker()">
         <div class="quick-picker-sheet" onclick="event.stopPropagation()">
             <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--border); padding-bottom:6px;">
@@ -946,6 +967,7 @@
         </div>
     </div>
 
+    <!-- Modal: Game Creator -->
     <div class="modal-overlay" id="modal-creator">
         <div class="modal-content">
             <div class="modal-header">
@@ -993,6 +1015,7 @@
         </div>
     </div>
 
+    <!-- Modal: Content Editor -->
     <div class="modal-overlay" id="modal-editor">
         <div class="modal-content">
             <div class="modal-header">
@@ -1007,6 +1030,7 @@
         </div>
     </div>
 
+    <!-- Modal: Export & Backup -->
     <div class="modal-overlay" id="modal-export">
         <div class="modal-content">
             <div class="modal-header">
@@ -1029,6 +1053,7 @@
         </div>
     </div>
 
+    <!-- Modal: Completion Score -->
     <div class="modal-overlay" id="modal-completion">
         <div class="modal-content" style="max-width:380px;">
             <div class="modal-header">
@@ -1058,8 +1083,8 @@
                 "title": "Osmanlı Islahatları Oyunu",
                 "g1Title": "18. Yüzyıl Islahatçıları",
                 "g2Title": "19. Yüzyıl Islahatçıları",
-                "g1Btn": "18. YY Çek",
-                "g2Btn": "19. YY Çek",
+                "g1Btn": "18. YY",
+                "g2Btn": "19. YY",
                 "cats1": [
                     { "id": "s3ahmet", "name": "3. Ahmet", "years": "1703-1730" },
                     { "id": "s1mahmut", "name": "1. Mahmut", "years": "1730-1754" },
@@ -1157,8 +1182,8 @@
                 "title": "İnkılap Tarihi ve Atatürk Dönemi",
                 "g1Title": "1920 - 1928 Yılları",
                 "g2Title": "1929 - 1938 Yılları",
-                "g1Btn": "1920-1928 Çek",
-                "g2Btn": "1929-1938 Çek",
+                "g1Btn": "1920-1928",
+                "g2Btn": "1929-1938",
                 "cats1": [
                     { "id": "cat_1920", "name": "1920", "years": "TBMM ve Teşkilatlanma" },
                     { "id": "cat_1921", "name": "1921", "years": "Anayasa ve Maarif" },
@@ -1259,7 +1284,6 @@
             audioCtx: null,
             activeGroupFilter: 'all',
             autoNext: false,
-            lastDrawType: 'mix',
 
             init() {
                 if (window.navigator.standalone || window.matchMedia('(display-mode: standalone)').matches) {
@@ -1491,6 +1515,7 @@
                 this.selectedCardId = picked.id;
                 this.lastDrawType = type;
 
+                // Otomatik grup sekmesine odaklanma (iPhone SE3 için ergonomik kolaylık)
                 if (this.activeGroupFilter !== 'all' && this.activeGroupFilter !== String(picked.group)) {
                     this.filterGroup(String(picked.group));
                 }
@@ -1541,6 +1566,7 @@
                 if (!this.activeDrawnItem) return;
                 const optsBox = document.getElementById('quick-picker-options');
                 optsBox.innerHTML = '';
+                // Aktif karta göre veya tüm padişahları listele
                 const list = this.activeGroupFilter === '1' ? this.cats1 : (this.activeGroupFilter === '2' ? this.cats2 : this.allCats);
                 list.forEach(c => {
                     const btn = document.createElement('button');
@@ -1636,6 +1662,7 @@
                     this.updateDrawBtns();
                     this.checkDone();
 
+                    // ⚡ Seri Kura (Otomatik Çek)
                     if (this.autoNext && this.getPool().length > 0) {
                         setTimeout(() => this.draw(this.lastDrawType || 'mix'), 220);
                     }
@@ -1687,8 +1714,6 @@
                 const weaks = this.items.filter(i => i.wrongCount > 0).sort((a,b) => b.wrongCount - a.wrongCount);
                 if (weaks.length === 0) {
                     wl.innerHTML = '<span style="color:var(--success); font-weight:700;">🎯 Sıfır hata ile tamamladın!</span>';
-                } else {
-                    :700;">🎯 Sıfır hata ile tamamladın!</span>';
                 } else {
                     weaks.forEach(w => {
                         const r = document.createElement('div');
@@ -1751,4 +1776,400 @@
 
                 fb.style.display = 'none';
                 btnNext.style.display = 'none';
-                optsEl.
+                optsEl.innerHTML = '';
+
+                if (pool.length === 0) {
+                    qEl.textContent = '🎉 Bu havuzdaki tüm sorular bitti!';
+                    return;
+                }
+
+                this.quizItem = pool[Math.floor(Math.random() * pool.length)];
+                qEl.textContent = this.quizItem.text;
+                document.getElementById('quiz-info').textContent = `Kalan Soru: ${pool.length}`;
+
+                const grpCats = this.quizItem.group === 1 ? this.cats1 : this.cats2;
+                const trueCat = this.allCats.find(c => c.id === this.quizItem.catId);
+                const distractors = grpCats.filter(c => c.id !== this.quizItem.catId).sort(() => Math.random() - 0.5).slice(0, 3);
+                const finalOpts = [trueCat, ...distractors].filter(Boolean).sort(() => Math.random() - 0.5);
+
+                finalOpts.forEach(cat => {
+                    const b = document.createElement('button');
+                    b.className = 'btn-opt';
+                    b.textContent = `${cat.name} ${cat.years ? '('+cat.years+')' : ''}`;
+                    b.onclick = () => this.answerQuiz(cat.id, b);
+                    optsEl.appendChild(b);
+                });
+            },
+
+            answerQuiz(catId, btnEl) {
+                if (this.quizAnswered) return;
+                this.quizAnswered = true;
+                const isCorr = (catId === this.quizItem.catId);
+                const fb = document.getElementById('quiz-fb');
+                document.querySelectorAll('.btn-opt').forEach(b => b.disabled = true);
+
+                if (isCorr) {
+                    this.sndCorr();
+                    btnEl.classList.add('correct');
+                    this.quizItem.status = 'placed';
+                    this.quizItem.timesCorrect = (this.quizItem.timesCorrect || 0) + 1;
+                    this.stats.corr++; this.stats.streak++;
+                    fb.style.display = 'block';
+                    fb.style.background = 'rgba(16,185,129,0.12)';
+                    fb.innerHTML = `<strong>Tebrikler! Doğru.</strong>${this.quizItem.note ? '<br>📝 ' + this.quizItem.note : ''}`;
+                } else {
+                    this.sndWrong();
+                    btnEl.classList.add('wrong');
+                    this.quizItem.wrongCount = (this.quizItem.wrongCount || 0) + 1;
+                    this.stats.wrong++; this.stats.streak = 0;
+                    const trueCat = this.allCats.find(c => c.id === this.quizItem.catId);
+                    document.querySelectorAll('.btn-opt').forEach(b => {
+                        if (trueCat && b.textContent.includes(trueCat.name)) b.classList.add('correct');
+                    });
+                    fb.style.display = 'block';
+                    fb.style.background = 'rgba(239,68,68,0.12)';
+                    fb.innerHTML = `<strong>Doğru: ${trueCat ? trueCat.name : ''}</strong>${this.quizItem.note ? '<br>💡 ' + this.quizItem.note : ''}`;
+                }
+                this.syncStorage(this.quizItem);
+                this.updateStats();
+                document.getElementById('btn-next-q').style.display = 'inline-flex';
+            },
+
+            fcItem: null,
+            nextFC() {
+                const inner = document.getElementById('fc-inner');
+                inner.classList.remove('flipped');
+                const pool = this.getPool();
+                if (pool.length === 0) {
+                    document.getElementById('fc-q').textContent = '🎉 Tüm bilgi kartları bitti!';
+                    document.getElementById('fc-a').textContent = 'Tebrikler!';
+                    document.getElementById('fc-n').textContent = '';
+                    return;
+                }
+                this.fcItem = pool[Math.floor(Math.random() * pool.length)];
+                document.getElementById('fc-q').textContent = this.fcItem.text;
+                const cat = this.allCats.find(c => c.id === this.fcItem.catId);
+                document.getElementById('fc-a').textContent = cat ? `${cat.name} ${cat.years ? '('+cat.years+')' : ''}` : '—';
+                document.getElementById('fc-n').textContent = this.fcItem.note ? '💡 ' + this.fcItem.note : '';
+            },
+
+            flipFC() {
+                document.getElementById('fc-inner').classList.toggle('flipped');
+            },
+
+            rateFC(knew) {
+                if (!this.fcItem) return;
+                if (knew) {
+                    this.sndCorr();
+                    this.fcItem.status = 'placed';
+                    this.stats.corr++; this.stats.streak++;
+                } else {
+                    this.sndWrong();
+                    this.fcItem.wrongCount = (this.fcItem.wrongCount || 0) + 1;
+                    this.stats.wrong++; this.stats.streak = 0;
+                }
+                this.syncStorage(this.fcItem);
+                this.updateStats();
+                this.nextFC();
+            },
+
+            openModal(id) { document.getElementById(id).classList.add('show'); },
+            closeModals() { document.querySelectorAll('.modal-overlay').forEach(m => m.classList.remove('show')); },
+
+            openCreator() {
+                this.clearCreator();
+                this.addCreatorCat('', '1. Sütun', '', '1');
+                this.addCreatorCat('', '2. Sütun', '', '2');
+                this.openModal('modal-creator');
+            },
+
+            clearCreator() {
+                document.getElementById('c-title').value = '';
+                document.getElementById('c-g1-t').value = '';
+                document.getElementById('c-g1-b').value = '';
+                document.getElementById('c-g2-t').value = '';
+                document.getElementById('c-g2-b').value = '';
+                document.getElementById('c-cat-list').innerHTML = '';
+                document.getElementById('c-item-list').innerHTML = '';
+                document.getElementById('c-bulk').value = '';
+            },
+
+            addCreatorCat(id='', name='', years='', grp='1') {
+                const list = document.getElementById('c-cat-list');
+                const row = document.createElement('div');
+                row.className = 'edit-row cat-row';
+                row.innerHTML = `
+                    <input type="hidden" class="c-cat-id" value="${id || 'cat_' + Math.random().toString(36).substr(2, 7)}">
+                    <input type="text" class="form-input c-cat-name" placeholder="Sütun" value="${name}" style="flex:1;">
+                    <input type="text" class="form-input c-cat-years" placeholder="Tarih" value="${years}" style="flex:1;">
+                    <select class="form-select c-cat-grp" style="width:auto;">
+                        <option value="1" ${grp==='1'?'selected':''}>1. Grup</option>
+                        <option value="2" ${grp==='2'?'selected':''}>2. Grup</option>
+                    </select>
+                    <button class="btn-icon" style="width:24px; height:24px; font-size:10px;" onclick="this.parentElement.remove()">✕</button>
+                `;
+                list.appendChild(row);
+            },
+
+            addCreatorItem(text='', catId='', note='') {
+                const list = document.getElementById('c-item-list');
+                const row = document.createElement('div');
+                row.className = 'edit-row item-row';
+                const cats = [];
+                document.querySelectorAll('.cat-row').forEach(r => {
+                    cats.push({ id: r.querySelector('.c-cat-id').value, name: r.querySelector('.c-cat-name').value || 'Sütun' });
+                });
+                const opts = cats.map(c => `<option value="${c.id}" ${c.id===catId?'selected':''}>${c.name}</option>`).join('');
+                row.innerHTML = `
+                    <input type="text" class="form-input c-item-text" placeholder="Madde" value="${text}" style="flex:2;">
+                    <select class="form-select c-item-cat">${opts}</select>
+                    <input type="text" class="form-input c-item-note" placeholder="İpucu" value="${note}" style="flex:1;">
+                    <button class="btn-icon" style="width:24px; height:24px; font-size:10px;" onclick="this.parentElement.remove()">✕</button>
+                `;
+                list.appendChild(row);
+            },
+
+            importBulkCreator() {
+                const t = document.getElementById('c-bulk').value.trim();
+                if (!t) return;
+                const cats = [];
+                document.querySelectorAll('.cat-row').forEach(r => {
+                    cats.push({ id: r.querySelector('.c-cat-id').value, name: r.querySelector('.c-cat-name').value.trim() });
+                });
+                let cnt = 0;
+                t.split('\n').forEach(line => {
+                    const p = line.split('|').map(s => s.trim());
+                    if (p[0]) {
+                        const m = cats.find(c => c.name.toLowerCase() === (p[1]||'').toLowerCase());
+                        this.addCreatorItem(p[0], m ? m.id : (cats[0]?cats[0].id:''), p[2]||'');
+                        cnt++;
+                    }
+                });
+                document.getElementById('c-bulk').value = '';
+                this.toast(`${cnt} madde eklendi!`);
+            },
+
+            saveNewGame() {
+                const title = document.getElementById('c-title').value.trim();
+                if (!title) { this.toast("Lütfen oyun adını yazın!", "warn"); return; }
+                const cats1 = [], cats2 = [];
+                document.querySelectorAll('.cat-row').forEach(r => {
+                    const id = r.querySelector('.c-cat-id').value;
+                    const name = r.querySelector('.c-cat-name').value.trim() || 'Sütun';
+                    const years = r.querySelector('.c-cat-years').value.trim();
+                    const grp = r.querySelector('.c-cat-grp').value;
+                    const o = { id, name, years };
+                    if (grp === '1') cats1.push(o); else cats2.push(o);
+                });
+                const items = [];
+                document.querySelectorAll('.item-row').forEach(r => {
+                    const text = r.querySelector('.c-item-text').value.trim();
+                    const catId = r.querySelector('.c-item-cat').value;
+                    const note = r.querySelector('.c-item-note').value.trim();
+                    if (text && catId) {
+                        const isG1 = cats1.some(c => c.id === catId);
+                        items.push({ id: 'i_' + Math.random().toString(36).substr(2,9), text, catId, group: isG1 ? 1 : 2, note, wrongCount: 0, timesCorrect: 0 });
+                    }
+                });
+
+                const newG = {
+                    id: 'g_' + Date.now(),
+                    title,
+                    g1Title: document.getElementById('c-g1-t').value.trim() || '1. Grup',
+                    g2Title: document.getElementById('c-g2-t').value.trim() || '2. Grup',
+                    g1Btn: document.getElementById('c-g1-b').value.trim() || '1. Grup',
+                    g2Btn: document.getElementById('c-g2-b').value.trim() || '2. Grup',
+                    cats1, cats2, items
+                };
+                this.games.push(newG);
+                this.saveStorage();
+                this.populateSelector();
+                this.loadGame(this.games.length - 1);
+                this.closeModals();
+                this.toast("Yeni oyun oluşturuldu!");
+            },
+
+            openEditor() {
+                const c = document.getElementById('editor-items');
+                c.innerHTML = '';
+                this.items.forEach(item => c.appendChild(this.createEditorRow(item)));
+                this.openModal('modal-editor');
+            },
+
+            createEditorRow(item) {
+                const r = document.createElement('div');
+                r.className = 'edit-row ed-item-row';
+                r.dataset.id = item.id;
+                const opts = this.allCats.map(c => `<option value="${c.id}" ${c.id===item.catId?'selected':''}>${c.name}</option>`).join('');
+                r.innerHTML = `
+                    <input type="text" class="form-input ed-text" value="${item.text}" style="flex:2;">
+                    <select class="form-select ed-cat">${opts}</select>
+                    <input type="text" class="form-input ed-note" placeholder="İpucu" value="${item.note||''}" style="flex:1;">
+                    <button class="btn-icon" style="width:24px; height:24px; font-size:10px;" onclick="this.parentElement.remove()">✕</button>
+                `;
+                return r;
+            },
+
+            addEditorItem() {
+                const defCat = this.allCats[0] ? this.allCats[0].id : '';
+                const c = document.getElementById('editor-items');
+                const r = this.createEditorRow({ id: 'i_' + Date.now(), text: '', catId: defCat, note: '' });
+                c.appendChild(r);
+                r.scrollIntoView({ behavior: 'smooth' });
+            },
+
+            saveEditor() {
+                const updated = [];
+                document.querySelectorAll('.ed-item-row').forEach(r => {
+                    const id = r.dataset.id;
+                    const text = r.querySelector('.ed-text').value.trim();
+                    const catId = r.querySelector('.ed-cat').value;
+                    const note = r.querySelector('.ed-note').value.trim();
+                    if (text && catId) {
+                        const isG1 = this.cats1.some(c => c.id === catId);
+                        const old = this.items.find(i => i.id === id);
+                        updated.push({
+                            id, text, catId, group: isG1 ? 1 : 2, note, status: 'unplaced',
+                            wrongCount: old ? old.wrongCount : 0, timesCorrect: old ? old.timesCorrect : 0
+                        });
+                    }
+                });
+                this.games[this.currIdx].items = updated;
+                this.saveStorage();
+                this.loadGame(this.currIdx);
+                this.closeModals();
+                this.toast("Maddeler kaydedildi!");
+            },
+
+            openExport() {
+                const code = this.getCleanHTML();
+                document.getElementById('exp-text').value = code;
+                this.openModal('modal-export');
+            },
+
+            getCleanHTML() {
+                const clone = document.documentElement.cloneNode(true);
+                clone.querySelectorAll('.modal-overlay').forEach(m => m.classList.remove('show'));
+                clone.querySelectorAll('textarea').forEach(t => t.innerHTML = '');
+                const seedScript = clone.querySelector('#game-seed');
+                if (seedScript) {
+                    const cleanJSON = JSON.stringify(this.games).split('<').join('\\x3C');
+                    seedScript.textContent = `\n        const INITIAL_DATA = ${cleanJSON};\n    `;
+                }
+                return "<!DOCTYPE html>\n<html lang=\"tr\" data-theme=\"" + (document.documentElement.getAttribute('data-theme')||'light') + "\">\n" + clone.innerHTML + "\n</html>";
+            },
+
+            downloadHTML() {
+                const blob = new Blob([this.getCleanHTML()], { type: 'text/html;charset=utf-8' });
+                const u = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = u; a.download = 'TarihOyunlari_Kutuphanesi.html';
+                a.click(); URL.revokeObjectURL(u);
+                this.toast("HTML dosyası indirildi!");
+            },
+
+            downloadJSON() {
+                const blob = new Blob([JSON.stringify(this.games, null, 2)], { type: 'application/json' });
+                const u = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = u; a.download = 'TarihOyunlari_Yedek.json';
+                a.click(); URL.revokeObjectURL(u);
+                this.toast("JSON veritabanı indirildi!");
+            },
+
+            importJSON(e) {
+                const file = e.target.files[0];
+                if (!file) return;
+                const r = new FileReader();
+                r.onload = ev => {
+                    try {
+                        const d = JSON.parse(ev.target.result);
+                        if (Array.isArray(d)) {
+                            this.games = d;
+                            this.saveStorage();
+                            this.populateSelector();
+                            this.loadGame(0);
+                            this.closeModals();
+                            this.toast("Yedek yüklendi! 🎉");
+                        }
+                    } catch(err) { alert("Geçersiz JSON dosyası!"); }
+                };
+                r.readAsText(file);
+            },
+
+            copyCode() {
+                const ta = document.getElementById('exp-text');
+                ta.select(); document.execCommand('copy');
+                this.toast("Kod panoya kopyalandı!");
+            },
+
+            toast(msg, type='info') {
+                const w = document.getElementById('toasts');
+                const t = document.createElement('div');
+                t.className = 'toast-item';
+                if (type === 'error') t.style.background = 'var(--danger)';
+                t.textContent = msg;
+                w.appendChild(t);
+                setTimeout(() => {
+                    t.style.opacity = '0';
+                    t.style.transition = '0.3s';
+                    setTimeout(() => t.remove(), 300);
+                }, 2200);
+            },
+
+            canvas: null, ctx: null, particles: [],
+            initConfetti() {
+                this.canvas = document.getElementById('confetti-canvas');
+                if (!this.canvas) return;
+                this.ctx = this.canvas.getContext('2d');
+                const res = () => { this.canvas.width = window.innerWidth; this.canvas.height = window.innerHeight; };
+                res(); window.addEventListener('resize', res);
+            },
+
+            launchConfetti() {
+                if (!this.ctx) return;
+                this.particles = [];
+                const colors = ['#4f46e5', '#10b981', '#f59e0b', '#ec4899', '#3b82f6'];
+                for (let i = 0; i < 50; i++) {
+                    this.particles.push({
+                        x: window.innerWidth / 2 + (Math.random() - 0.5) * 140,
+                        y: window.innerHeight * 0.5,
+                        vx: (Math.random() - 0.5) * 10,
+                        vy: -Math.random() * 8 - 3,
+                        size: Math.random() * 6 + 3,
+                        color: colors[Math.floor(Math.random() * colors.length)],
+                        rot: Math.random() * 360,
+                        vRot: (Math.random() - 0.5) * 8,
+                        op: 1
+                    });
+                }
+                this.renderConfetti();
+            },
+
+            renderConfetti() {
+                if (!this.ctx) return;
+                this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+                let alive = false;
+                this.particles.forEach(p => {
+                    p.x += p.vx; p.y += p.vy; p.vy += 0.3;
+                    p.rot += p.vRot; p.op -= 0.02;
+                    if (p.op > 0 && p.y < this.canvas.height) {
+                        alive = true;
+                        this.ctx.save();
+                        this.ctx.globalAlpha = p.op;
+                        this.ctx.translate(p.x, p.y);
+                        this.ctx.rotate((p.rot * Math.PI) / 180);
+                        this.ctx.fillStyle = p.color;
+                        this.ctx.fillRect(-p.size/2, -p.size/2, p.size, p.size);
+                        this.ctx.restore();
+                    }
+                });
+                if (alive) requestAnimationFrame(() => this.renderConfetti());
+                else this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+            }
+        };
+
+        window.addEventListener('DOMContentLoaded', () => App.init());
+    </script>
+</body>
+</html>
